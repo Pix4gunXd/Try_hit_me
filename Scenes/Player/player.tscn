@@ -21,9 +21,9 @@ script = ExtResource("1_8p5x0")
 [node name="Null_C" parent="." instance=ExtResource("1_jrrlv")]
 
 [node name="rifle" parent="." instance=ExtResource("3_k260c")]
+visible = false
 
 [node name="Pistol" parent="." instance=ExtResource("3_hrb71")]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 9)
