@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://o444e84oaeyh"]
+
+[ext_resource type="Texture2D" uid="uid://0ghl1unyaock" path="res://Images/Wall-transformed.jpeg" id="1_4g4nu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hrewa"]
+size = Vector2(208, 189)
+
+[node name="Wall" type="StaticBody2D"]
+collision_layer = 3
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, 2)
+scale = Vector2(0.137308, 0.173321)
+texture = ExtResource("1_4g4nu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 2.5)
+shape = SubResource("RectangleShape2D_hrewa")

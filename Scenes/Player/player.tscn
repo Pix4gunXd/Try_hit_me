@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3 uid="uid://booyxkl3io48e"]
+
+[ext_resource type="Script" path="res://Scenes/Player/player.gd" id="1_8p5x0"]
+[ext_resource type="PackedScene" uid="uid://cxxeiqfuatwlt" path="res://Characteres/Null_C/null_c.tscn" id="1_jrrlv"]
+[ext_resource type="PackedScene" uid="uid://6tvi0h603au0" path="res://Weapons/Glock/pistol.tscn" id="3_hrb71"]
+[ext_resource type="PackedScene" uid="uid://c0lgodkbnsq7b" path="res://Menus/Hud/hud.tscn" id="4_io4ti"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6uhpm"]
+radius = 21.5385
+height = 104.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r2r0c"]
+radius = 33.0769
+height = 118.462
+
+[node name="Player" type="CharacterBody2D"]
+scale = Vector2(1.3, 1.3)
+script = ExtResource("1_8p5x0")
+
+[node name="Null_C" parent="." instance=ExtResource("1_jrrlv")]
+
+[node name="Pistol" parent="." instance=ExtResource("3_hrb71")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 9)
+shape = SubResource("CapsuleShape2D_6uhpm")
+
+[node name="HurtBox" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+position = Vector2(0, 6.15385)
+shape = SubResource("CapsuleShape2D_r2r0c")
+debug_color = Color(1, 0, 0, 0.419608)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.7, 0.7)
+
+[node name="Hud" parent="." instance=ExtResource("4_io4ti")]
