@@ -1,0 +1,54 @@
+[gd_scene load_steps=2 format=3 uid="uid://er7ekipu02fx"]
+
+[ext_resource type="Script" path="res://Menus/MainMenu/GameModes/modes.gd" id="1_2l3js"]
+
+[node name="Modes" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2l3js")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 647.0
+color = Color(0, 0, 0, 0.360784)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.65
+anchor_right = 0.5
+anchor_bottom = 0.65
+offset_left = -87.0
+offset_top = -50.2
+offset_right = 82.0
+offset_bottom = 15.8
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Arena" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Arena"
+
+[node name="Back" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Back"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 295.0
+offset_top = 123.0
+offset_right = 852.0
+offset_bottom = 286.0
+theme_override_font_sizes/font_size = 96
+text = "Try Hit Me"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/Arena" to="." method="_on_arena_pressed"]
+[connection signal="pressed" from="VBoxContainer/Back" to="." method="_on_back_pressed"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://2mk6doagg73d"]
 
-[ext_resource type="PackedScene" uid="uid://booyxkl3io48e" path="res://Scenes/Player/player.tscn" id="2_rjv5l"]
+[ext_resource type="PackedScene" uid="uid://booyxkl3io48e" path="res://Player/player.tscn" id="2_rjv5l"]
 [ext_resource type="PackedScene" uid="uid://o444e84oaeyh" path="res://Scenes/objects/Wall/wall.tscn" id="3_7yacf"]
 [ext_resource type="PackedScene" uid="uid://bh7cwgmj4ajwo" path="res://test_box.tscn" id="3_47pnx"]
 [ext_resource type="PackedScene" uid="uid://d1cm1cw0blfuj" path="res://Enemies/Level_1/Bobot/e_bobot.tscn" id="4_hixlb"]
