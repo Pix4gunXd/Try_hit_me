@@ -14,7 +14,6 @@ var is_reloading = false
 func _physics_process(delta):
 	%Marker2D.look_at(get_global_mouse_position())
 
-
 func _unhandled_input(event):
 	if event.is_action_pressed("reload"):
 		reload()
