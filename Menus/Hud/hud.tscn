@@ -78,4 +78,4 @@ show_percentage = false
 [node name="Label" type="Label" parent="."]
 offset_right = 208.0
 offset_bottom = 23.0
-text = "Alpha v 0.0.51"
+text = "Alpha v 0.0.7"

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cuacls433armr"]
 
-[ext_resource type="Script" path="res://menu.gd" id="1_wemks"]
+[ext_resource type="Script" path="res://Menus/MainMenu/menu.gd" id="1_1mu1r"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -9,7 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_wemks")
+script = ExtResource("1_1mu1r")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
@@ -19,15 +19,15 @@ color = Color(0, 0, 0, 0.360784)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = -1
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 0.65
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -84.5
-offset_top = -50.5
-offset_right = 84.5
-offset_bottom = 50.5
+anchor_bottom = 0.65
+offset_left = -87.0
+offset_top = -50.2
+offset_right = 82.0
+offset_bottom = 50.8
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -45,5 +45,25 @@ layout_mode = 2
 focus_neighbor_bottom = NodePath("../StartButton")
 text = "Quit"
 
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 295.0
+offset_top = 123.0
+offset_right = 852.0
+offset_bottom = 286.0
+theme_override_font_sizes/font_size = 96
+text = "Try Hit Me"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_top = 613.0
+offset_right = 195.0
+offset_bottom = 646.0
+text = "DEV_TEST"
+
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
