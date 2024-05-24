@@ -1,0 +1,94 @@
+[33mcommit 6c0c45275433ea55f1bc830165ca159c2304b76f[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mrevisao[m[33m)[m
+Merge: 89d4820 92abd62
+Author: DallasDallacorte <beleleo@outlook.com.br>
+Date:   Fri May 24 20:08:00 2024 -0300
+
+    teste
+
+[33mcommit 92abd62b295770184464665bbbd19a0fb1c0b0c3[m
+Author: Eduardo Deeke <eduardohmdeeke@gmail.com>
+Date:   Fri May 24 19:38:02 2024 -0300
+
+    testing
+
+[33mcommit 5a28d56df81a9cfdb1aeadf47bbc689ed54915a7[m
+Author: Eduardo Deeke <eduardohmdeeke@gmail.com>
+Date:   Fri May 24 19:26:33 2024 -0300
+
+    testing
+
+[33mcommit e2742ef8becf212a203c1463dbfc6876b037fe87[m
+Author: Pix4gunXd <Caio.pompei@gmail.com>
+Date:   Fri May 24 17:47:10 2024 -0300
+
+    Main menu modifications
+
+[33mcommit 03c1eee6665f44e915c3b7cc2b23d826bae3a159[m
+Author: Pix4gunXd <Caio.pompei@gmail.com>
+Date:   Fri May 24 16:35:39 2024 -0300
+
+    Criei o menu e uma nova scene para o modo arena, a scene antérior agora serve para testes
+
+[33mcommit 460caded4c95f612bc9fced5c61fbd8906da6526[m
+Merge: f867376 203223d
+Author: Pix4gunXd <Caio.pompei@gmail.com>
+Date:   Fri May 24 01:16:36 2024 -0300
+
+    Merge branch 'revisao' of https://github.com/Pix4gunXd/Try_hit_me into revisao
+
+[33mcommit f867376ffb915f51f5122f5a81198bf764a72a95[m
+Author: Pix4gunXd <Caio.pompei@gmail.com>
+Date:   Fri May 24 01:14:41 2024 -0300
+
+    Added color background to the Menu!
+
+[33mcommit 203223d44288266b1907c78249e36f92a22cb39f[m
+Merge: 5094201 3cdbf0a
+Author: Caio Pompei <128269904+Pix4gunXd@users.noreply.github.com>
+Date:   Fri May 24 01:05:35 2024 -0300
+
+    Merge pull request #4 from Pix4gunXd/main
+    
+    Merge main with revisao
+
+[33mcommit 3cdbf0ae0a67eff2a2ce6ba89763cf1a7e8237c5[m
+Merge: 8dc77fc 5094201
+Author: Caio Pompei <128269904+Pix4gunXd@users.noreply.github.com>
+Date:   Fri May 24 00:52:01 2024 -0300
+
+    Merge pull request #3 from Pix4gunXd/revisao
+    
+    Add Menu
+
+[33mcommit 50942019618bfc6903182278099956a783a14fe0[m[33m ([m[1;31morigin/Caio[m[33m)[m
+Author: Pix4gunXd <Caio.pompei@gmail.com>
+Date:   Fri May 24 00:48:23 2024 -0300
+
+    Add Menu
+
+[33mcommit 89d48202a73cebb17e4da782b7aea8f46040c5d5[m
+Author: DallasDallacorte <beleleo@outlook.com.br>
+Date:   Thu May 23 21:19:46 2024 -0300
+
+    test
+
+[33mcommit 8dc77fc8c01dc8029f5048d568f880ed973de4e1[m[33m ([m[1;31morigin/Gustavo[m[33m, [m[1;31morigin/Ed[m[33m, [m[1;31morigin/Dallas[m[33m)[m
+Merge: a6e0f91 2689dd0
+Author: Caio Pompei <128269904+Pix4gunXd@users.noreply.github.com>
+Date:   Thu May 23 20:39:16 2024 -0300
+
+    Merge pull request #1 from Pix4gunXd/revisao
+    
+    feature: added a fucking shotgun (it doesn't reload though)
+
+[33mcommit 2689dd0c0969a2fa18ffd912f4f4581d580fcb94[m
+Author: Eduardo Deeke <eduardohmdeeke@gmail.com>
+Date:   Thu May 23 20:27:36 2024 -0300
+
+    feature: added a fucking shotgun (it doesn't reload though)
+
+[33mcommit a6e0f916e03e932e8abdeae9e6a22cc3d6a60322[m
+Author: Pix4gunXd <Caio.pompei@gmail.com>
+Date:   Thu May 23 19:59:45 2024 -0300
+
+    First commit
