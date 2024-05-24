@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://c3ltrerq5fftw"]
+
+[ext_resource type="Script" path="res://Weapons/Rifle/rifle.gd" id="1_h5pw7"]
+[ext_resource type="Texture2D" uid="uid://pwp2kkkoy03w" path="res://Characteres/Null_C/images/arm.png" id="1_syiff"]
+[ext_resource type="Texture2D" uid="uid://b2dpffu0ms5fj" path="res://Weapons/Rifle/Rifle_01.png" id="2_qa0hb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4n2cq"]
+size = Vector2(23, 1.5)
+
+[node name="rifle" type="Area2D"]
+script = ExtResource("1_h5pw7")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(-25, -31)
+
+[node name="Rifle01" type="Sprite2D" parent="Marker2D"]
+position = Vector2(56, -9)
+scale = Vector2(0.198611, 0.198611)
+texture = ExtResource("2_qa0hb")
+
+[node name="Arm" type="Sprite2D" parent="Marker2D"]
+position = Vector2(20.964, 0.267609)
+rotation = -1.5708
+scale = Vector2(0.113167, 0.113167)
+texture = ExtResource("1_syiff")
+
+[node name="ShootingPoint" type="Marker2D" parent="Marker2D"]
+unique_name_in_owner = true
+position = Vector2(110, -11)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(73.5, -42.25)
+shape = SubResource("RectangleShape2D_4n2cq")
+
+[node name="Reload_timer" type="Timer" parent="."]
+unique_name_in_owner = true
+one_shot = true
+
+[connection signal="timeout" from="Reload_timer" to="." method="_on_reload_timer_timeout"]

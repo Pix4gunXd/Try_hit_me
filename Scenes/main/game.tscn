@@ -1,11 +1,18 @@
+<<<<<<< HEAD
 [gd_scene load_steps=9 format=3 uid="uid://2mk6doagg73d"]
 
 [ext_resource type="Texture2D" uid="uid://bixfvhqbgyv5w" path="res://Menus/Demo TileSet.png" id="1_ushmk"]
 [ext_resource type="PackedScene" uid="uid://booyxkl3io48e" path="res://Scenes/Player/player.tscn" id="2_rjv5l"]
+=======
+[gd_scene load_steps=6 format=3 uid="uid://2mk6doagg73d"]
+
+[ext_resource type="PackedScene" uid="uid://booyxkl3io48e" path="res://Player/player.tscn" id="2_rjv5l"]
+>>>>>>> 92abd62b295770184464665bbbd19a0fb1c0b0c3
 [ext_resource type="PackedScene" uid="uid://o444e84oaeyh" path="res://Scenes/objects/Wall/wall.tscn" id="3_7yacf"]
 [ext_resource type="PackedScene" uid="uid://bh7cwgmj4ajwo" path="res://test_box.tscn" id="3_47pnx"]
 [ext_resource type="PackedScene" uid="uid://d1cm1cw0blfuj" path="res://Enemies/Level_1/Bobot/e_bobot.tscn" id="4_hixlb"]
 
+<<<<<<< HEAD
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3lmni"]
 texture = ExtResource("1_ushmk")
 0:0/0 = 0
@@ -373,24 +380,36 @@ sources/0 = SubResource("TileSetAtlasSource_3lmni")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_virt7"]
 size = Vector2(48, 8908)
+=======
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_virt7"]
+size = Vector2(38, 5597)
+>>>>>>> 92abd62b295770184464665bbbd19a0fb1c0b0c3
 
 [node name="game" type="Node2D"]
 y_sort_enabled = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = 2.0
+<<<<<<< HEAD
 offset_top = -8911.0
 offset_right = 15460.0
+=======
+offset_top = -5604.0
+offset_right = 9388.0
+>>>>>>> 92abd62b295770184464665bbbd19a0fb1c0b0c3
 offset_bottom = -1.0
 mouse_filter = 2
 color = Color(0.372549, 0.372549, 0.372549, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="ColorRect"]
 
+<<<<<<< HEAD
 [node name="TileMap" type="TileMap" parent="ColorRect/Sprite2D"]
 tile_set = SubResource("TileSet_fn4i5")
 format = 2
 
+=======
+>>>>>>> 92abd62b295770184464665bbbd19a0fb1c0b0c3
 [node name="Player" parent="." instance=ExtResource("2_rjv5l")]
 position = Vector2(2518, -1572)
 
@@ -437,5 +456,9 @@ position = Vector2(2461, -2377)
 collision_layer = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+<<<<<<< HEAD
 position = Vector2(19, -4460)
+=======
+position = Vector2(24, -2804.5)
+>>>>>>> 92abd62b295770184464665bbbd19a0fb1c0b0c3
 shape = SubResource("RectangleShape2D_virt7")

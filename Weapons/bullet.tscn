@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [gd_scene load_steps=5 format=3 uid="uid://d16hn4awoidfw"]
 
 [ext_resource type="Script" path="res://Weapons/bullet.gd" id="1_fydpq"]
@@ -6,6 +7,15 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_edr2o"]
 radius = 4.0
+=======
+[gd_scene load_steps=4 format=3 uid="uid://d16hn4awoidfw"]
+
+[ext_resource type="Script" path="res://Weapons/bullet.gd" id="1_fydpq"]
+[ext_resource type="Texture2D" uid="uid://c3b402lck5o4y" path="res://Characteres/Null_C/images/foot.png" id="2_jqf47"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_edr2o"]
+radius = 9.05539
+>>>>>>> 92abd62b295770184464665bbbd19a0fb1c0b0c3
 
 [node name="Bullet" type="Area2D"]
 top_level = true
@@ -13,6 +23,7 @@ collision_layer = 0
 collision_mask = 2
 script = ExtResource("1_fydpq")
 
+<<<<<<< HEAD
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_edr2o")
 
@@ -25,4 +36,15 @@ texture = ExtResource("2_mwdir")
 scale = Vector2(0.0382653, 0.0382653)
 texture = ExtResource("3_2yrvi")
 
+=======
+[node name="Foot" type="Sprite2D" parent="."]
+modulate = Color(1, 0.992157, 0.0352941, 1)
+position = Vector2(-13, -0.999999)
+scale = Vector2(0.895, 0.704724)
+texture = ExtResource("2_jqf47")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_edr2o")
+
+>>>>>>> 92abd62b295770184464665bbbd19a0fb1c0b0c3
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

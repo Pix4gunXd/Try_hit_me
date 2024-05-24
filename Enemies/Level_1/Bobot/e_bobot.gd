@@ -11,10 +11,13 @@ var xp = null
 
 var contato_player = false
 
+<<<<<<< HEAD
 func _ready():
 	$Bobot.play_walk_animation()
 
 
+=======
+>>>>>>> 92abd62b295770184464665bbbd19a0fb1c0b0c3
 func _physics_process(delta):
 	var direction = global_position.direction_to(player.global_position)
 	velocity = direction * 250
@@ -24,6 +27,10 @@ func _physics_process(delta):
 	
 
 func walk_face():
+<<<<<<< HEAD
+=======
+	$Bobot.play_walk_animation()
+>>>>>>> 92abd62b295770184464665bbbd19a0fb1c0b0c3
 	
 	if  velocity.x > 0:
 		$Bobot.scale.x = -1  # Inverte o nó horizontalmente
@@ -32,9 +39,14 @@ func walk_face():
 
 
 func take_damage(weapon_dmg):
+<<<<<<< HEAD
 	%Bobot.play_hurt()
 	health -= weapon_dmg
 	
+=======
+	health -= weapon_dmg
+	%Bobot.play_hurt()
+>>>>>>> 92abd62b295770184464665bbbd19a0fb1c0b0c3
 	
 	if health == 0:
 		queue_free()

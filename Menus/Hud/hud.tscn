@@ -1,7 +1,11 @@
 [gd_scene load_steps=7 format=3 uid="uid://c0lgodkbnsq7b"]
 
 [ext_resource type="Script" path="res://Menus/Hud/hud.gd" id="1_om87c"]
+<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://cwy5x3fc08rqu" path="res://Menus/glock 1.png" id="2_eoh6u"]
+=======
+[ext_resource type="Texture2D" uid="uid://jnyy86i026x7" path="res://Weapons/Glock/glock_17_1.png" id="2_mliyk"]
+>>>>>>> 92abd62b295770184464665bbbd19a0fb1c0b0c3
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i2mnl"]
 bg_color = Color(0, 0, 0, 0.733333)
@@ -56,6 +60,7 @@ horizontal_alignment = 2
 vertical_alignment = 1
 
 [node name="gun" type="TextureRect" parent="."]
+<<<<<<< HEAD
 offset_left = 917.0
 offset_top = 599.0
 offset_right = 3615.0
@@ -63,6 +68,16 @@ offset_bottom = 2249.0
 rotation = -0.616905
 scale = Vector2(0.0349959, 0.0349959)
 texture = ExtResource("2_eoh6u")
+=======
+offset_left = 925.0
+offset_top = 599.0
+offset_right = 1513.0
+offset_bottom = 1008.0
+rotation = -0.616905
+scale = Vector2(0.124683, 0.124683)
+texture = ExtResource("2_mliyk")
+flip_h = true
+>>>>>>> 92abd62b295770184464665bbbd19a0fb1c0b0c3
 
 [node name="XpBar" type="ProgressBar" parent="."]
 offset_left = 429.0
@@ -77,4 +92,8 @@ show_percentage = false
 [node name="Label" type="Label" parent="."]
 offset_right = 208.0
 offset_bottom = 23.0
+<<<<<<< HEAD
 text = "Alpha v 0.0.41"
+=======
+text = "Alpha v 0.0.7"
+>>>>>>> 92abd62b295770184464665bbbd19a0fb1c0b0c3

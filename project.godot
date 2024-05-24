@@ -11,12 +11,21 @@ config_version=5
 [application]
 
 config/name="Try_hit_me"
+<<<<<<< HEAD
 config/version="0.0.41"
 run/main_scene="res://Scenes/main/game.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 boot_splash/bg_color=Color(0.141176, 0.141176, 0.141176, 0)
 boot_splash/image="res://Images/TryHitMe.png"
 config/icon="res://Images/icon.svg"
+=======
+config/version="0.0.7"
+run/main_scene="res://Menus/MainMenu/menu.tscn"
+config/features=PackedStringArray("4.2", "GL Compatibility")
+boot_splash/bg_color=Color(0.168627, 0.168627, 0.168627, 1)
+boot_splash/image="res://Images/Icons/TryHitMe2.png"
+config/icon="res://Images/Icons/TryHitMe.png"
+>>>>>>> 92abd62b295770184464665bbbd19a0fb1c0b0c3
 
 [display]
 
@@ -33,7 +42,14 @@ folder_colors={
 "res://Enemies/Level_2/": "yellow",
 "res://Images/": "green",
 "res://Menus/": "teal",
+<<<<<<< HEAD
 "res://Scenes/main/": "yellow",
+=======
+"res://Player/": "blue",
+"res://Scenes/World/": "orange",
+"res://Scenes/main/": "yellow",
+"res://Scenes/objects/": "gray",
+>>>>>>> 92abd62b295770184464665bbbd19a0fb1c0b0c3
 "res://Weapons/": "gray"
 }
 
@@ -68,7 +84,11 @@ move_down={
 shoot={
 "deadzone": 0.5,
 "events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"canceled":false,"pressed":false,"double_click":false,"script":null)
+<<<<<<< HEAD
 ]
+=======
+, null]
+>>>>>>> 92abd62b295770184464665bbbd19a0fb1c0b0c3
 }
 reload={
 "deadzone": 0.5,

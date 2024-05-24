@@ -1,15 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://6tvi0h603au0"]
+[gd_scene load_steps=7 format=3 uid="uid://cuk3remwc8qav"]
 
-[ext_resource type="Script" path="res://Weapons/Glock/pistol.gd" id="1_i28cd"]
-<<<<<<< HEAD
-[ext_resource type="Texture2D" uid="uid://cwy5x3fc08rqu" path="res://Menus/glock 1.png" id="2_ehpum"]
-[ext_resource type="Texture2D" uid="uid://b67v86tubieep" path="res://Menus/arm.png" id="3_bdsc7"]
-=======
-[ext_resource type="Texture2D" uid="uid://jnyy86i026x7" path="res://Weapons/Glock/glock_17_1.png" id="2_ormr1"]
-[ext_resource type="Texture2D" uid="uid://pwp2kkkoy03w" path="res://Characteres/Null_C/images/arm.png" id="3_tgx6l"]
->>>>>>> 92abd62b295770184464665bbbd19a0fb1c0b0c3
+[ext_resource type="Script" path="res://Weapons/Shotgun/Shotgun.gd" id="1_djg0p"]
+[ext_resource type="Texture2D" uid="uid://jnyy86i026x7" path="res://Weapons/Glock/glock_17_1.png" id="2_arixc"]
+[ext_resource type="Texture2D" uid="uid://pwp2kkkoy03w" path="res://Characteres/Null_C/images/arm.png" id="3_nothb"]
 
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_8euar"]
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_3n0k1"]
 a = Vector2(8, 33)
 b = Vector2(-8, 33)
 
@@ -33,10 +28,8 @@ _data = {
 "reload": SubResource("Animation_jte3w")
 }
 
-[node name="Pistol" type="Area2D"]
-collision_layer = 0
-collision_mask = 2
-script = ExtResource("1_i28cd")
+[node name="Shotgun" type="Area2D"]
+script = ExtResource("1_djg0p")
 
 [node name="Marker2D" type="Marker2D" parent="."]
 unique_name_in_owner = true
@@ -46,37 +39,23 @@ rotation = -0.0117383
 [node name="Glock171" type="Sprite2D" parent="Marker2D"]
 position = Vector2(45.0204, -1.47165)
 rotation = -3.12985
-<<<<<<< HEAD
-scale = Vector2(0.0156249, -0.0139422)
-texture = ExtResource("2_ehpum")
-flip_h = true
-=======
 scale = Vector2(0.065, -0.058)
-texture = ExtResource("2_ormr1")
->>>>>>> 92abd62b295770184464665bbbd19a0fb1c0b0c3
+texture = ExtResource("2_arixc")
 
 [node name="Arm" type="Sprite2D" parent="Marker2D"]
 position = Vector2(19.9751, 2.23462)
 rotation = -1.55906
 scale = Vector2(0.104226, 0.112086)
-<<<<<<< HEAD
-texture = ExtResource("3_bdsc7")
-
-[node name="ShootingPoint" type="Marker2D" parent="Marker2D"]
-unique_name_in_owner = true
-position = Vector2(66.1246, -10.2245)
-=======
-texture = ExtResource("3_tgx6l")
+texture = ExtResource("3_nothb")
 
 [node name="ShootingPoint" type="Marker2D" parent="Marker2D"]
 unique_name_in_owner = true
 position = Vector2(63.1248, -10.2597)
->>>>>>> 92abd62b295770184464665bbbd19a0fb1c0b0c3
 rotation = 0.0056614
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-24, -32)
-shape = SubResource("SegmentShape2D_8euar")
+shape = SubResource("SegmentShape2D_3n0k1")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true
@@ -87,5 +66,3 @@ libraries = {
 [node name="Reload_timer" type="Timer" parent="."]
 unique_name_in_owner = true
 one_shot = true
-
-[connection signal="timeout" from="Reload_timer" to="." method="_on_reload_timer_timeout"]

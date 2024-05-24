@@ -1,19 +1,12 @@
 extends Area2D
 
-<<<<<<< HEAD
-var max_ammo = 17
+var max_ammo = 21
 var ammo = max_ammo
-var dmg = 25
-=======
-var max_ammo = 12
-var ammo = max_ammo
-var dmg = 10
->>>>>>> 92abd62b295770184464665bbbd19a0fb1c0b0c3
+var dmg = 15
 var is_reloading = false
 
 func _physics_process(delta):
 	%Marker2D.look_at(get_global_mouse_position())
-
 
 func _unhandled_input(event):
 	if event.is_action_pressed("reload"):
@@ -31,7 +24,7 @@ func shoot():
 	new_bullet.global_position = %ShootingPoint.global_position
 	new_bullet.global_rotation = %ShootingPoint.global_rotation
 	
-	new_bullet.weapon = self
+	new_bullet.weapon = self #Coloca a arma utilizada como referencia para o tiro disparado para puxar o dano
 	
 	%ShootingPoint.add_child(new_bullet)
 	
@@ -44,10 +37,12 @@ func reload():
 	is_reloading = true
 	%Reload_timer.start()
 	
-	%AnimationPlayer.play("reload")
+	# %AnimationPlayer.play("reload")
 
 # SIGNALS
 
 func _on_reload_timer_timeout(): #Ao encerrar o Timer
 	ammo = max_ammo
 	is_reloading = false
+
+#ww
