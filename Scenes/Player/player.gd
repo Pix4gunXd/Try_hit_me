@@ -22,7 +22,8 @@ func walk_face():
 	else:
 		$Null_C.play_idle_animation()
 	#-----------------------------------------------------------------------------------------------
-	if get_global_mouse_position().x < global_position.x:
+	if get_global_mouse_position().x < global_position.x: 
+		#Trocar o nome das armas como $Pistol por um node referente a todas as armas que cuide da troca delas!
 		$Null_C.scale.x = -1  # Inverte o nó horizontalmente
 		$Pistol.scale.x = -1
 		$rifle.scale.x = -1
