@@ -11,12 +11,12 @@ config_version=5
 [application]
 
 config/name="Try_hit_me"
-config/version="0.0.41"
+config/version="0.0.7"
 run/main_scene="res://Menus/MainMenu/menu.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
-boot_splash/bg_color=Color(0.141176, 0.141176, 0.141176, 0)
-boot_splash/image="res://Images/TryHitMe.png"
-config/icon="res://Images/icon.svg"
+boot_splash/bg_color=Color(0.168627, 0.168627, 0.168627, 1)
+boot_splash/image="res://Images/Icons/TryHitMe2.png"
+config/icon="res://Images/Icons/TryHitMe.png"
 
 [display]
 
