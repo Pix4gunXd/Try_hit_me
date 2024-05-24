@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cuacls433armr"]
+[gd_scene load_steps=3 format=3 uid="uid://cuacls433armr"]
 
 [ext_resource type="Script" path="res://Menus/MainMenu/menu.gd" id="1_1mu1r"]
+[ext_resource type="Texture2D" uid="uid://o4q5hdx5e7c0" path="res://Images/Try Hit Me_label.png" id="2_iji1u"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -45,16 +46,10 @@ layout_mode = 2
 focus_neighbor_bottom = NodePath("../StartButton")
 text = "Quit"
 
-[node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_left = 295.0
-offset_top = 123.0
-offset_right = 852.0
-offset_bottom = 286.0
-theme_override_font_sizes/font_size = 96
-text = "Try Hit Me"
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="TryHitMeLabel" type="Sprite2D" parent="."]
+position = Vector2(579, 249)
+scale = Vector2(1.43038, 1.43038)
+texture = ExtResource("2_iji1u")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
