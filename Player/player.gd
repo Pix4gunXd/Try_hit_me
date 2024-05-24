@@ -14,8 +14,6 @@ func _physics_process(delta):
 	hud() # Constantly update HUD
 	
 
-
-
 func walk_face():
 	if velocity.length() > 0.0:
 		$Null_C.play_walk_animation()
@@ -40,4 +38,3 @@ func take_damage(dmg):
 	pass
 
 #SIGNALS
-
