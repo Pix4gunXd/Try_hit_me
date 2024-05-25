@@ -1,0 +1,88 @@
+[gd_scene load_steps=5 format=3 uid="uid://c08e3ao5brrxg"]
+
+[ext_resource type="Texture2D" uid="uid://b4vrl4fjmnm1p" path="res://Player/Texture/leg.png" id="1_s08ib"]
+[ext_resource type="Texture2D" uid="uid://ncoym1hwr7ei" path="res://Player/Texture/body.png" id="2_srdo4"]
+[ext_resource type="Texture2D" uid="uid://i62jnw8clit3" path="res://Player/Texture/head.png" id="3_yi01r"]
+[ext_resource type="Texture2D" uid="uid://dbrgg5xxckr68" path="res://Player/Texture/arm.png" id="4_vnpan"]
+
+[node name="Skeletor" type="Node2D"]
+
+[node name="Skeletor Parts" type="Node2D" parent="."]
+
+[node name="Le Parts" type="Node2D" parent="Skeletor Parts"]
+
+[node name="Leg" type="Sprite2D" parent="Skeletor Parts/Le Parts"]
+position = Vector2(-26, -64)
+texture = ExtResource("1_s08ib")
+
+[node name="Leg2" type="Sprite2D" parent="Skeletor Parts/Le Parts"]
+position = Vector2(18, -63)
+texture = ExtResource("1_s08ib")
+flip_h = true
+
+[node name="Body" type="Sprite2D" parent="Skeletor Parts/Le Parts"]
+position = Vector2(0, -177)
+texture = ExtResource("2_srdo4")
+
+[node name="Head" type="Sprite2D" parent="Skeletor Parts/Le Parts"]
+position = Vector2(2, -288)
+texture = ExtResource("3_yi01r")
+
+[node name="Arm" type="Sprite2D" parent="Skeletor Parts/Le Parts"]
+position = Vector2(-60, -176)
+texture = ExtResource("4_vnpan")
+
+[node name="Arm2" type="Sprite2D" parent="Skeletor Parts/Le Parts"]
+position = Vector2(56, -173)
+texture = ExtResource("4_vnpan")
+flip_h = true
+
+[node name="Skeleton2D" type="Skeleton2D" parent="Skeletor Parts"]
+
+[node name="Base" type="Bone2D" parent="Skeletor Parts/Skeleton2D"]
+position = Vector2(0, -123)
+
+[node name="Body" type="Bone2D" parent="Skeletor Parts/Skeleton2D/Base"]
+position = Vector2(0, -54)
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Skeletor Parts/Skeleton2D/Base/Body"]
+remote_path = NodePath("../../../../Le Parts/Body")
+
+[node name="Head" type="Bone2D" parent="Skeletor Parts/Skeleton2D/Base/Body"]
+position = Vector2(0, -51)
+
+[node name="LeftShoulder" type="Bone2D" parent="Skeletor Parts/Skeleton2D/Base/Body"]
+position = Vector2(-58, -48)
+
+[node name="LeftArm" type="Bone2D" parent="Skeletor Parts/Skeleton2D/Base/Body/LeftShoulder"]
+position = Vector2(-3, 51)
+
+[node name="LeftHand" type="Bone2D" parent="Skeletor Parts/Skeleton2D/Base/Body/LeftShoulder/LeftArm"]
+position = Vector2(0, 48)
+
+[node name="RightShoulder" type="Bone2D" parent="Skeletor Parts/Skeleton2D/Base/Body"]
+position = Vector2(57, -43)
+
+[node name="RightArm" type="Bone2D" parent="Skeletor Parts/Skeleton2D/Base/Body/RightShoulder"]
+position = Vector2(1, 50)
+
+[node name="RightHand" type="Bone2D" parent="Skeletor Parts/Skeleton2D/Base/Body/RightShoulder/RightArm"]
+position = Vector2(-2, 45)
+
+[node name="LeftTigh" type="Bone2D" parent="Skeletor Parts/Skeleton2D/Base"]
+position = Vector2(-25, 11)
+
+[node name="LeftLeg" type="Bone2D" parent="Skeletor Parts/Skeleton2D/Base/LeftTigh"]
+position = Vector2(0, 50)
+
+[node name="LeftFeet" type="Bone2D" parent="Skeletor Parts/Skeleton2D/Base/LeftTigh/LeftLeg"]
+position = Vector2(-1, 50)
+
+[node name="RightTigh" type="Bone2D" parent="Skeletor Parts/Skeleton2D/Base"]
+position = Vector2(19, 10)
+
+[node name="RightLeg" type="Bone2D" parent="Skeletor Parts/Skeleton2D/Base/RightTigh"]
+position = Vector2(0, 52)
+
+[node name="RightFeet" type="Bone2D" parent="Skeletor Parts/Skeleton2D/Base/RightTigh/RightLeg"]
+position = Vector2(-1, 50)
