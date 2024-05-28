@@ -1,7 +1,31 @@
-[gd_scene load_steps=3 format=3 uid="uid://cuacls433armr"]
+[gd_scene load_steps=7 format=3 uid="uid://cuacls433armr"]
 
 [ext_resource type="Script" path="res://Menus/MainMenu/menu.gd" id="1_1mu1r"]
-[ext_resource type="Texture2D" uid="uid://o4q5hdx5e7c0" path="res://Images/Try Hit Me_label.png" id="2_iji1u"]
+[ext_resource type="FontFile" uid="uid://crtlhn86rvuuh" path="res://Kurland.otf" id="2_4kkk1"]
+[ext_resource type="Texture2D" uid="uid://c6q20ga25ngvv" path="res://Images/Try Hit Me_label2.png" id="3_k5ug8"]
+[ext_resource type="AudioStream" uid="uid://b0g6l5rnw5154" path="res://Sounds/ClickHover.mp3" id="4_kggym"]
+
+[sub_resource type="Animation" id="Animation_nntwx"]
+resource_name = "Title"
+length = 2.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TryHitMeLabel2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.205),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(571, 209), Vector2(571, 175)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2c48d"]
+_data = {
+"Title": SubResource("Animation_nntwx")
+}
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -16,49 +40,87 @@ script = ExtResource("1_1mu1r")
 layout_mode = 0
 offset_right = 1153.0
 offset_bottom = 647.0
-color = Color(0, 0, 0, 0.360784)
+color = Color(0, 0, 0, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = -1
+anchors_preset = 8
 anchor_left = 0.5
-anchor_top = 0.65
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.65
-offset_left = -87.0
-offset_top = -50.2
-offset_right = 82.0
-offset_bottom = 50.8
+anchor_bottom = 0.5
+offset_left = -142.0
+offset_top = 9.0
+offset_right = 142.0
+offset_bottom = 225.0
 grow_horizontal = 2
 grow_vertical = 2
+alignment = 1
 
 [node name="StartButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 focus_neighbor_top = NodePath("../QuitButton")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 0.443137)
+theme_override_fonts/font = ExtResource("2_4kkk1")
+theme_override_font_sizes/font_size = 50
 text = "Start"
+flat = true
+
+[node name="ControlsButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 0.443137)
+theme_override_fonts/font = ExtResource("2_4kkk1")
+theme_override_font_sizes/font_size = 40
+text = "Controls"
+flat = true
 
 [node name="OptionsButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 0.443137)
+theme_override_fonts/font = ExtResource("2_4kkk1")
+theme_override_font_sizes/font_size = 35
 text = "Options"
+flat = true
 
 [node name="QuitButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 focus_neighbor_bottom = NodePath("../StartButton")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_4kkk1")
+theme_override_font_sizes/font_size = 35
 text = "Quit"
-
-[node name="TryHitMeLabel" type="Sprite2D" parent="."]
-position = Vector2(579, 249)
-scale = Vector2(1.43038, 1.43038)
-texture = ExtResource("2_iji1u")
+flat = true
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_top = 613.0
-offset_right = 195.0
+offset_top = 612.0
+offset_right = 158.0
 offset_bottom = 646.0
 text = "DEV_TEST"
 
+[node name="TryHitMeLabel2" type="Sprite2D" parent="."]
+position = Vector2(571, 203.596)
+scale = Vector2(1.254, 1.226)
+texture = ExtResource("3_k5ug8")
+
+[node name="TitleAnimation" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_2c48d")
+}
+
+[node name="ButtonHover" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_kggym")
+
+[connection signal="mouse_entered" from="VBoxContainer/StartButton" to="." method="_on_start_button_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="mouse_entered" from="VBoxContainer/ControlsButton" to="." method="_on_controls_button_mouse_entered"]
+[connection signal="pressed" from="VBoxContainer/ControlsButton" to="." method="_on_controls_button_pressed"]
+[connection signal="mouse_entered" from="VBoxContainer/OptionsButton" to="." method="_on_options_button_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="mouse_entered" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

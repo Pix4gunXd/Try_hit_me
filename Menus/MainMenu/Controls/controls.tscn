@@ -1,9 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://er7ekipu02fx"]
+[gd_scene load_steps=7 format=3 uid="uid://dii5ampssn8jj"]
 
-[ext_resource type="Script" path="res://Menus/MainMenu/GameModes/modes.gd" id="1_2l3js"]
-[ext_resource type="FontFile" uid="uid://crtlhn86rvuuh" path="res://Kurland.otf" id="2_1cnxv"]
-[ext_resource type="Texture2D" uid="uid://c6q20ga25ngvv" path="res://Images/Try Hit Me_label2.png" id="3_g8w6o"]
-[ext_resource type="AudioStream" uid="uid://b0g6l5rnw5154" path="res://Sounds/ClickHover.mp3" id="4_tt6y8"]
+[ext_resource type="Script" path="res://Menus/MainMenu/Controls/Controls.gd" id="1_3au0f"]
+[ext_resource type="FontFile" uid="uid://crtlhn86rvuuh" path="res://Kurland.otf" id="2_ft0s7"]
+[ext_resource type="Texture2D" uid="uid://c6q20ga25ngvv" path="res://Images/Try Hit Me_label2.png" id="3_lqd06"]
+[ext_resource type="AudioStream" uid="uid://b0g6l5rnw5154" path="res://Sounds/ClickHover.mp3" id="4_f8ycp"]
 
 [sub_resource type="Animation" id="Animation_nntwx"]
 resource_name = "Title"
@@ -27,14 +27,14 @@ _data = {
 "Title": SubResource("Animation_nntwx")
 }
 
-[node name="Modes" type="Control"]
+[node name="Controls" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_2l3js")
+script = ExtResource("1_3au0f")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
@@ -44,41 +44,53 @@ color = Color(0, 0, 0, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = -1
+anchors_preset = 8
 anchor_left = 0.5
-anchor_top = 0.65
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.65
-offset_left = -87.0
-offset_top = -93.2
-offset_right = 82.0
-offset_bottom = -27.2
+anchor_bottom = 0.5
+offset_left = -292.0
+offset_top = 4.5
+offset_right = 292.0
+offset_bottom = 139.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Arena" type="Button" parent="VBoxContainer"]
+[node name="Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_hover_color = Color(1, 1, 1, 0.443137)
-theme_override_fonts/font = ExtResource("2_1cnxv")
-theme_override_font_sizes/font_size = 50
-text = "Arena"
-flat = true
+theme_override_fonts/font = ExtResource("2_ft0s7")
+theme_override_font_sizes/font_size = 36
+text = "W,A,S,D - Walk"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ft0s7")
+theme_override_font_sizes/font_size = 36
+text = "Left Mouse - Shoot"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ft0s7")
+theme_override_font_sizes/font_size = 36
+text = "1,2,3 - Change weapon"
+horizontal_alignment = 1
 
 [node name="TryHitMeLabel2" type="Sprite2D" parent="."]
 position = Vector2(571, 196.814)
 scale = Vector2(1.254, 1.226)
-texture = ExtResource("3_g8w6o")
+texture = ExtResource("3_lqd06")
 
 [node name="Back" type="Button" parent="."]
-layout_mode = 2
+layout_mode = 0
 offset_left = 491.0
 offset_top = 583.0
 offset_right = 660.0
 offset_bottom = 618.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_1cnxv")
+theme_override_fonts/font = ExtResource("2_ft0s7")
 theme_override_font_sizes/font_size = 25
 text = "Back"
 flat = true
@@ -89,9 +101,7 @@ libraries = {
 }
 
 [node name="ButtonHover" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_tt6y8")
+stream = ExtResource("4_f8ycp")
 
-[connection signal="mouse_entered" from="VBoxContainer/Arena" to="." method="_on_arena_mouse_entered"]
-[connection signal="pressed" from="VBoxContainer/Arena" to="." method="_on_arena_pressed"]
 [connection signal="mouse_entered" from="Back" to="." method="_on_back_mouse_entered"]
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

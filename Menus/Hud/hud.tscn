@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://c0lgodkbnsq7b"]
+[gd_scene load_steps=8 format=3 uid="uid://c0lgodkbnsq7b"]
 
 [ext_resource type="Script" path="res://Menus/Hud/hud.gd" id="1_om87c"]
 [ext_resource type="Texture2D" uid="uid://jnyy86i026x7" path="res://Weapons/Glock/glock_17_1.png" id="2_mliyk"]
+[ext_resource type="FontFile" uid="uid://crtlhn86rvuuh" path="res://Kurland.otf" id="2_rtyad"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i2mnl"]
 bg_color = Color(0, 0, 0, 0.733333)
@@ -46,10 +47,11 @@ value = 200.0
 show_percentage = false
 
 [node name="Ammo" type="Label" parent="."]
-offset_left = 985.0
-offset_top = 564.0
-offset_right = 1147.0
-offset_bottom = 634.0
+offset_left = 978.0
+offset_top = 568.0
+offset_right = 1140.0
+offset_bottom = 638.0
+theme_override_fonts/font = ExtResource("2_rtyad")
 theme_override_font_sizes/font_size = 51
 text = "99/ 99"
 horizontal_alignment = 2
@@ -76,6 +78,8 @@ value = 100.0
 show_percentage = false
 
 [node name="Label" type="Label" parent="."]
-offset_right = 208.0
-offset_bottom = 23.0
-text = "Alpha v 0.0.7"
+offset_right = 109.0
+offset_bottom = 18.0
+theme_override_fonts/font = ExtResource("2_rtyad")
+theme_override_font_sizes/font_size = 31
+text = "Alpha v 0.0.8"
