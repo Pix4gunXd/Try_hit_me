@@ -103,7 +103,7 @@ offset_bottom = 646.0
 text = "DEV_TEST"
 
 [node name="TryHitMeLabel2" type="Sprite2D" parent="."]
-position = Vector2(571, 203.596)
+position = Vector2(571, 203.255)
 scale = Vector2(1.254, 1.226)
 texture = ExtResource("3_k5ug8")
 
