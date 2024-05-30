@@ -1,0 +1,78 @@
+[gd_scene load_steps=2 format=3 uid="uid://cg50nvb7ff0r1"]
+
+[sub_resource type="GDScript" id="GDScript_rcs7d"]
+script/source = "extends HBoxContainer
+
+# Define a list to store the items in the hotbar
+var hotbar_items = []
+
+# Number of slots in the hotbar (fixed to 3 for this game)
+const NUM_SLOTS = 3
+
+# Function to initialize the hotbar with empty items
+func _ready():
+	# Initialize the hotbar with empty slots
+	for i in range(NUM_SLOTS):
+		hotbar_items.append(null)
+	update_hotbar()
+	initialize_weapons()
+
+# Function to initialize the weapons in the hotbar
+func initialize_weapons():
+	var weapon1 = preload(\"res://Weapons/Glock/pistol.tscn\")
+	var weapon2 = preload(\"res://Weapons/Rifle/rifle.tscn\")
+	var weapon3 = preload(\"res://Weapons/Shotgun/shotgun.tscn\")
+	set_hotbar_item(0, weapon1)
+	set_hotbar_item(1, weapon2)
+	set_hotbar_item(2, weapon3)
+
+# Function to update the hotbar UI
+func update_hotbar():
+	for i in range(NUM_SLOTS):
+		var slot = get_child(i)
+		if hotbar_items[i] != null:
+			slot.texture = hotbar_items[i].icon
+		else:
+			slot.texture = preload(\"res://Weapons/bullet.tscn\")
+
+# Function to set an item in a specific hotbar slot
+func set_hotbar_item(slot_index, item):
+	if slot_index >= 0 and slot_index < NUM_SLOTS:
+		hotbar_items[slot_index] = item
+		update_hotbar()
+
+# Handle input for selecting items in the hotbar
+func _input(event):
+	if event is InputEventKey:
+		if event.pressed:
+			if event.scancode == KEY_1:
+				select_hotbar_item(0)
+			elif event.scancode == KEY_2:
+				select_hotbar_item(1)
+			elif event.scancode == KEY_3:
+				select_hotbar_item(2)
+
+# Function to handle selecting an item from the hotbar
+func select_hotbar_item(slot_index):
+	if slot_index >= 0 and slot_index < NUM_SLOTS:
+		var item = hotbar_items[slot_index]
+		if item != null:
+			# Implement your logic for using the item
+			print(\"Selected item:\", item.name)
+"
+
+[node name="HBoxContainer" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_rcs7d")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+offset_left = 665.5
+offset_top = 608.0
+offset_right = 665.5
+offset_bottom = 639.0

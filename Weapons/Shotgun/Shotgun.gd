@@ -63,3 +63,4 @@ func reload():
 func _on_reload_timer_timeout(): # Ao encerrar o Timer
 	ammo = max_ammo
 	is_reloading = false
+
