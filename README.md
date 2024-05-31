@@ -15,13 +15,13 @@
 </br>
 
 ## Menu 01
-![Imagem da Primeira Tela](Images_Readme/Menu_01.png)
+![Imagem da Primeira Tela](Images_Readme/Menu_02.png)
 </br>
 </br>
 </br>
 
 ## Menu 02
-![Imagem da Segunda Tela](Images_Readme/Menu_02.png)
+![Imagem da Segunda Tela](Images_Readme/Menu_01.png)
 </br>
 </br>
 </br>
