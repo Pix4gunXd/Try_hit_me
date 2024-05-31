@@ -8,7 +8,7 @@
 
 
 # Telas
-- Lorem ipsum dolor sit amet. Eos error sunt ea consequatur rerum et voluptates voluptas. Aut galisum tempora sit ducimus nihil ut galisum perspiciatis qui repellat eaque non eaque animi.
+- Telas Iniciais: Menu, Modos.
 </br>
 </br>
 </br>
