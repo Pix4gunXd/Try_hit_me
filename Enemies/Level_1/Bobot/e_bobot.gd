@@ -2,15 +2,15 @@ extends CharacterBody2D
 
 #BUG: Se inimigo enconstar no jogador 0.1sec antes da função hurt() ser chamada, inimigo causa 20 de dano!!!
 
-@onready var player = get_node("/root/game/Player")
+@onready var player = get_node("/root/Arena/Player")
 
 var health = 100
 var dmg = 10;
 var dmg_rate = 0.5
 var xp = null
-
 var contato_player = false
 
+@warning_ignore("unused_parameter")
 func _physics_process(delta):
 	var direction = global_position.direction_to(player.global_position)
 	velocity = direction * 250

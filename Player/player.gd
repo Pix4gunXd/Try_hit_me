@@ -5,7 +5,7 @@ extends CharacterBody2D
  #If you want to comment fast use Ctrl + K
 var life = 200.0
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	var direction = Input.get_vector("move_left","move_right","move_up","move_down")	
 	velocity = direction * 500
 	move_and_slide()
@@ -36,7 +36,7 @@ func hud():
 	$Hud.update_ammo($Pistol.ammo, $Pistol.max_ammo) #Trocar para .ammo da arma atual selecionada
 	$Hud.update_healthbar(life)
 
-func take_damage(dmg):
+func take_damage(_dmg):
 	pass
 
 #SIGNALS

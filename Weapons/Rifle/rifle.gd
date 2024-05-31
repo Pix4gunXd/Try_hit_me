@@ -5,7 +5,7 @@ var ammo = max_ammo
 var dmg = 15
 var is_reloading = false
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	%Marker2D.look_at(get_global_mouse_position())
 
 
