@@ -3,7 +3,7 @@ extends Node2D
 # Variável para contar o número de inimigos
 var enemy_count = 0
 # Limite máximo de inimigos
-var max_enemies = 2
+var max_enemies = 20
 
 func spawn_enemy():
 	if enemy_count < max_enemies:
@@ -27,5 +27,5 @@ func _on_timer_timeout():
 
 # Você pode chamar esta função para reiniciar o spawn de inimigos, se necessário
 func reset_enemy_count():
-	enemy_count = 0
+	enemy_count >= 2
 	get_node("Timer").start()  # Reinicie o timer para permitir novos spawns

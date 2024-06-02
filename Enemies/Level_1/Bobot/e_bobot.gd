@@ -17,7 +17,6 @@ func _physics_process(delta):
 	move_and_slide()
 	
 	walk_face()
-	
 
 func walk_face():
 	$Bobot.play_walk_animation()
@@ -32,7 +31,7 @@ func take_damage(weapon_dmg):
 	health -= weapon_dmg
 	%Bobot.play_hurt()
 	
-	if health == 0:
+	if health <= 0:
 		queue_free()
 		#add animation to being hurt
 		
