@@ -11,7 +11,7 @@ func _physics_process(_delta):
 func _unhandled_input(event):
 	if event.is_action_pressed("reload"):
 		reload()
-		
+	
 	if event.is_action_pressed("shoot") and ammo > 0:
 		shoot()
 

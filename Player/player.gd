@@ -12,7 +12,6 @@ func _physics_process(_delta):
 	
 	walk_face() #Walk and face
 	hud() # Constantly update HUD
-	
 
 func walk_face():
 	if velocity.length() > 0.0:

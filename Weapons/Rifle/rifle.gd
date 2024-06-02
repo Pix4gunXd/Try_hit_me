@@ -2,18 +2,30 @@ extends Area2D
 
 var max_ammo = 21
 var ammo = max_ammo
-var dmg = 15
+var dmg = 12
 var is_reloading = false
+var is_shooting = false
+var shoot_delay = 0.09  # Adjust this for the rate of fire
+var time_since_last_shot = 0.0
+
+func _ready():
+	pass
 
 func _physics_process(_delta):
 	%Marker2D.look_at(get_global_mouse_position())
 
+func _process(delta):
+	if Input.is_action_pressed("shoot") and ammo > 0 and not is_reloading:
+		time_since_last_shot += delta
+		if time_since_last_shot >= shoot_delay:
+			shoot()
+			time_since_last_shot = 0.0
+	else:
+		time_since_last_shot = 0.0
+
 func _unhandled_input(event):
 	if event.is_action_pressed("reload"):
 		reload()
-		
-	if event.is_action_pressed("shoot") and ammo > 0:
-		shoot()
 
 func shoot():
 	if is_reloading:
@@ -37,12 +49,10 @@ func reload():
 	is_reloading = true
 	%Reload_timer.start()
 	
-	# %AnimationPlayer.play("reload")
+	%AnimationPlayer.play("reload")
 
 # SIGNALS
 
 func _on_reload_timer_timeout(): #Ao encerrar o Timer
 	ammo = max_ammo
 	is_reloading = false
-
-#ww
