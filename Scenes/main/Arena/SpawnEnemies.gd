@@ -27,5 +27,5 @@ func _on_timer_timeout():
 
 # Você pode chamar esta função para reiniciar o spawn de inimigos, se necessário
 func reset_enemy_count():
-	enemy_count >= 2
+	enemy_count == 0
 	get_node("Timer").start()  # Reinicie o timer para permitir novos spawns

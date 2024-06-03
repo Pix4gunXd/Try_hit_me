@@ -2,7 +2,7 @@ extends Area2D
 
 var max_ammo = 12
 var ammo = max_ammo
-var dmg = 10
+var dmg = 12
 var is_reloading = false
 
 func _physics_process(_delta):

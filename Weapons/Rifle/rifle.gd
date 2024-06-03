@@ -2,7 +2,7 @@ extends Area2D
 
 var max_ammo = 21
 var ammo = max_ammo
-var dmg = 12
+var dmg = 15
 var is_reloading = false
 var is_shooting = false
 var shoot_delay = 0.09  # Adjust this for the rate of fire

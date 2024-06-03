@@ -35,9 +35,9 @@ unique_name_in_owner = true
 position = Vector2(-25, -31)
 rotation = -0.0117383
 
-[node name="Rifle01" type="Sprite2D" parent="Marker2D"]
-position = Vector2(56, -9)
-scale = Vector2(0.198611, 0.198611)
+[node name="Rifle" type="Sprite2D" parent="Marker2D"]
+position = Vector2(58.1369, -11.3184)
+scale = Vector2(0.22852, 0.22852)
 texture = ExtResource("2_qa0hb")
 
 [node name="Arm" type="Sprite2D" parent="Marker2D"]
@@ -48,7 +48,7 @@ texture = ExtResource("1_syiff")
 
 [node name="ShootingPoint" type="Marker2D" parent="Marker2D"]
 unique_name_in_owner = true
-position = Vector2(110, -11)
+position = Vector2(118.168, -13.6139)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(73.5, -42.25)

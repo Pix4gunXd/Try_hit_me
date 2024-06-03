@@ -36,10 +36,10 @@ unique_name_in_owner = true
 position = Vector2(-24, -32)
 rotation = -0.0117383
 
-[node name="Glock171" type="Sprite2D" parent="Marker2D"]
-position = Vector2(64.0308, -2.24856)
+[node name="Shotgun" type="Sprite2D" parent="Marker2D"]
+position = Vector2(65.6225, -1.52712)
 rotation = -3.12985
-scale = Vector2(0.065, -0.058)
+scale = Vector2(0.0578277, -0.0516001)
 texture = ExtResource("2_32drf")
 
 [node name="Arm" type="Sprite2D" parent="Marker2D"]
@@ -50,7 +50,7 @@ texture = ExtResource("3_nothb")
 
 [node name="ShootingPoint" type="Marker2D" parent="Marker2D"]
 unique_name_in_owner = true
-position = Vector2(143.131, -10.3206)
+position = Vector2(136.12, -9.40287)
 rotation = 0.0056614
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
