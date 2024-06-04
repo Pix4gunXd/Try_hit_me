@@ -2,22 +2,21 @@ extends CharacterBody2D
 
 #BUG: Se inimigo enconstar no jogador 0.1sec antes da função hurt() ser chamada, inimigo causa 20 de dano!!!
 
-@onready var player = get_node("/root/game/Player")
+@onready var player = get_node("/root/Arena/Player")
 
-var health = 100
+var health = 60
 var dmg = 10;
 var dmg_rate = 0.5
 var xp = null
-
 var contato_player = false
 
+@warning_ignore("unused_parameter")
 func _physics_process(delta):
 	var direction = global_position.direction_to(player.global_position)
 	velocity = direction * 250
 	move_and_slide()
 	
 	walk_face()
-	
 
 func walk_face():
 	$Bobot.play_walk_animation()
@@ -32,7 +31,7 @@ func take_damage(weapon_dmg):
 	health -= weapon_dmg
 	%Bobot.play_hurt()
 	
-	if health == 0:
+	if health <= 0:
 		queue_free()
 		#add animation to being hurt
 		

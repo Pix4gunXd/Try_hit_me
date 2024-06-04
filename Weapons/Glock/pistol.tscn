@@ -38,7 +38,7 @@ unique_name_in_owner = true
 position = Vector2(-24, -32)
 rotation = -0.0117383
 
-[node name="Glock171" type="Sprite2D" parent="Marker2D"]
+[node name="Glock17" type="Sprite2D" parent="Marker2D"]
 position = Vector2(45.0204, -1.47165)
 rotation = -3.12985
 scale = Vector2(0.065, -0.058)

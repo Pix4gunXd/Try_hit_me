@@ -1,6 +1,7 @@
 extends Control
 
 func _ready():
+	AudioPlayer.play_music_bg()
 	$TitleAnimation.play("Title")
 	#$VBoxContainer/StartButton.grab_focus() #Define o foco no primeiro botão, permitindo controlar com as setas do mouse!
 
@@ -34,4 +35,4 @@ func _on_quit_button_mouse_entered():
 # --------------------------------------------------------------------------------------------------------------------------------
 
 func _on_button_pressed():
-	get_tree().change_scene_to_file("res://Scenes/main/game.tscn")
+	pass

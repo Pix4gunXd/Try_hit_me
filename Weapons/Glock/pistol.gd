@@ -2,16 +2,16 @@ extends Area2D
 
 var max_ammo = 12
 var ammo = max_ammo
-var dmg = 10
+var dmg = 12
 var is_reloading = false
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	%Marker2D.look_at(get_global_mouse_position())
 
 func _unhandled_input(event):
 	if event.is_action_pressed("reload"):
 		reload()
-		
+	
 	if event.is_action_pressed("shoot") and ammo > 0:
 		shoot()
 

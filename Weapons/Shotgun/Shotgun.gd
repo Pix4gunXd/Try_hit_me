@@ -1,6 +1,6 @@
 extends Area2D
 
-var max_ammo = 8
+var max_ammo = 7
 var ammo = max_ammo
 var dmg = 5
 var is_reloading = false
