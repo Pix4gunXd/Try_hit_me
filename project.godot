@@ -18,6 +18,10 @@ boot_splash/bg_color=Color(0.168627, 0.168627, 0.168627, 1)
 boot_splash/image="res://Images/Icons/TryHitMe2.png"
 config/icon="res://Images/Icons/TryHitMe.png"
 
+[autoload]
+
+AudioPlayer="*res://Sounds/audio_player.tscn"
+
 [display]
 
 window/size/resizable=false
