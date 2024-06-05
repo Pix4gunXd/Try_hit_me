@@ -5,7 +5,7 @@ var travelled_distance = 0
 var weapon = null #Verifica de qual arma esta sendo disparada para puxar o dano
 
 func _physics_process(delta):
-	const SPEED = 1000
+	const SPEED = 1600
 	const RANGE = 1200
 	
 	var direction = Vector2.RIGHT.rotated(rotation) # RIGHT = x1/y0 MAKES THE BULLET GO STRAIGHT
