@@ -22,4 +22,3 @@ func _on_body_entered(body):
 	#Place it in damage.emit later
 	if body.has_method("take_damage"):
 		body.take_damage(weapon.dmg) #Take the dmg value of the weapon
-

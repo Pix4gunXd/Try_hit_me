@@ -3,7 +3,7 @@ extends Node2D
 # Variável para contar o número de inimigos
 var enemy_count = 0
 # Limite máximo de inimigos
-var max_enemies = 20
+var max_enemies = 10
 
 func spawn_enemy():
 	if enemy_count < max_enemies:
