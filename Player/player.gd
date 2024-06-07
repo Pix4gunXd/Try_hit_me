@@ -39,10 +39,27 @@ var weapon1_scene = preload("res://Weapons/Glock/pistol.tscn")
 var weapon2_scene = preload("res://Weapons/Rifle/rifle.tscn")
 var weapon3_scene = preload("res://Weapons/Shotgun/shotgun.tscn")
 
+# Preload your weapon images
+var weapon1_image = preload("res://Weapons/Glock/glock_17_1.png")
+var weapon2_image = preload("res://Weapons/Rifle/Rifle_01.png")
+var weapon3_image = preload("res://Weapons/Shotgun/m1014 1.png")
+
 # Variable to hold the current weapon node
 var current_weapon = null
 
+# Load the HUD scene
+var hud_scene = preload("res://Menus/Hud/hud.tscn")
+var hud_instance = null
+var weapon_image_texture_rect = null
+
 func _ready():
+	# Instance the HUD scene and add it to the scene tree
+	hud_instance = hud_scene.instantiate()
+	add_child(hud_instance)
+	
+	# Get reference to the TextureRect node
+	weapon_image_texture_rect = hud_instance.get_node("WeaponImage")
+	
 	switch_weapon(1) # Start with weapon 1 or any default weapon
 
 func _input(event):
@@ -62,10 +79,13 @@ func switch_weapon(weapon_number):
 	match weapon_number:
 		1:
 			current_weapon = weapon1_scene.instantiate()
+			weapon_image_texture_rect.texture = weapon1_image
 		2:
 			current_weapon = weapon2_scene.instantiate()
+			weapon_image_texture_rect.texture = weapon2_image
 		3:
 			current_weapon = weapon3_scene.instantiate()
+			weapon_image_texture_rect.texture = weapon3_image
 	
 	# Add the new weapon as a child of the player
 	if current_weapon:
@@ -73,3 +93,4 @@ func switch_weapon(weapon_number):
 		current_weapon.position = Vector2.ZERO # Adjust the position as necessary
 
 #SIGNALS
+

@@ -3,11 +3,11 @@ extends Node2D
 # Variável para contar o número de inimigos
 var enemy_count = 0
 # Limite máximo de inimigos
-var max_enemies = 20
+var max_enemies = 10
 
 func spawn_enemy():
 	if enemy_count < max_enemies:
-		var path_follow = get_node("Player/Path2D/PathFollow2D")
+		var path_follow = get_node("ColorRect/Path2D/PathFollow2D")
 		if path_follow:
 			var new_enemy = preload("res://Enemies/Level_1/Bobot/e_bobot.tscn").instantiate()
 			path_follow.progress_ratio = randf()

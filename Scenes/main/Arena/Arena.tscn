@@ -1,13 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://g6utxpjj2a1q"]
+[gd_scene load_steps=6 format=3 uid="uid://g6utxpjj2a1q"]
 
 [ext_resource type="PackedScene" uid="uid://booyxkl3io48e" path="res://Player/player.tscn" id="1_7wftd"]
 [ext_resource type="Script" path="res://Scenes/main/Arena/SpawnEnemies.gd" id="1_no6j3"]
 
 [sub_resource type="Curve2D" id="Curve2D_dc17w"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -302, -2529, 0, 0, 0, 0, -282, 223, 0, 0, 0, 0, 4083, 233, 0, 0, 0, 0, 4093, -2519, 0, 0, 0, 0, -198, -2537)
+"points": PackedVector2Array(0, 0, 0, 0, -302, -2529, 0, 0, 0, 0, -282, 223, 0, 0, 0, 0, 4109.61, 213.385, 0, 0, 0, 0, 4093, -2519, 0, 0, 0, 0, -198, -2537)
 }
 point_count = 5
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q7mq4"]
+size = Vector2(3850, 59)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6mtcr"]
+size = Vector2(64.5, 2460.5)
 
 [node name="Arena" type="Node2D"]
 script = ExtResource("1_no6j3")
@@ -23,20 +29,50 @@ color = Color(0.372549, 0.372549, 0.372549, 1)
 [node name="Sprite2D" type="Sprite2D" parent="ColorRect"]
 position = Vector2(-2, 2356)
 
-[node name="Player" parent="." instance=ExtResource("1_7wftd")]
-position = Vector2(824, -465)
-
-[node name="Path2D" type="Path2D" parent="Player"]
-position = Vector2(-633.846, 357.692)
-scale = Vector2(0.769231, 0.769231)
+[node name="Path2D" type="Path2D" parent="ColorRect"]
+position = Vector2(818.609, 1758.39)
+scale = Vector2(0.541752, 0.504293)
 curve = SubResource("Curve2D_dc17w")
 
-[node name="PathFollow2D" type="PathFollow2D" parent="Player/Path2D"]
+[node name="PathFollow2D" type="PathFollow2D" parent="ColorRect/Path2D"]
 position = Vector2(-302, -2529)
 rotation = 1.56353
+
+[node name="Player" parent="." instance=ExtResource("1_7wftd")]
+position = Vector2(1867, -1160)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.3
 autostart = true
+
+[node name="TopBoundary" type="StaticBody2D" parent="."]
+position = Vector2(294, 312)
+constant_linear_velocity = Vector2(20, 20)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TopBoundary"]
+position = Vector2(1633, -2693.5)
+shape = SubResource("RectangleShape2D_q7mq4")
+
+[node name="BottomBoundary" type="StaticBody2D" parent="."]
+position = Vector2(284, 2721)
+constant_linear_velocity = Vector2(20, 20)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BottomBoundary"]
+position = Vector2(1643, -2692.5)
+shape = SubResource("RectangleShape2D_q7mq4")
+
+[node name="LeftBoundary" type="StaticBody2D" parent="."]
+position = Vector2(1252, 330)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftBoundary"]
+position = Vector2(-1284.5, -1504.5)
+shape = SubResource("RectangleShape2D_6mtcr")
+
+[node name="RightBoundary" type="StaticBody2D" parent="."]
+position = Vector2(1395, 340)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightBoundary"]
+position = Vector2(2489.25, -1512.25)
+shape = SubResource("RectangleShape2D_6mtcr")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

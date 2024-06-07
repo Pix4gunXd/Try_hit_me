@@ -10,13 +10,17 @@ config_version=5
 
 [application]
 
-config/name="Try_hit_me"
-config/version="0.0.7"
+config/name="Try Hit Me"
 run/main_scene="res://Menus/MainMenu/menu.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
-boot_splash/bg_color=Color(0.168627, 0.168627, 0.168627, 1)
+boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/image="res://Images/Icons/TryHitMe2.png"
+boot_splash/fullsize=false
 config/icon="res://Images/Icons/TryHitMe.png"
+
+[audio]
+
+buses/default_bus_layout="res://Sounds/default_bus_layout.tres"
 
 [autoload]
 
@@ -24,6 +28,7 @@ AudioPlayer="*res://Sounds/audio_player.tscn"
 
 [display]
 
+window/size/mode=3
 window/size/resizable=false
 mouse_cursor/custom_image="res://Images/CrossHair.png"
 mouse_cursor/custom_image_hotspot=Vector2(16, 16)
@@ -41,6 +46,7 @@ folder_colors={
 "res://Scenes/World/": "orange",
 "res://Scenes/main/": "yellow",
 "res://Scenes/objects/": "gray",
+"res://Sounds/": "purple",
 "res://Weapons/": "gray"
 }
 
