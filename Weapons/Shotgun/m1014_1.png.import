@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://mrpl8esds270"
-path="res://.godot/imported/m1014 1.png-3c2a7fbcb019270a38660e89758d35b3.ctex"
+path="res://.godot/imported/m1014_1.png-5388cf91ede2a326d96325b69525ee0f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Weapons/Shotgun/m1014 1.png"
-dest_files=["res://.godot/imported/m1014 1.png-3c2a7fbcb019270a38660e89758d35b3.ctex"]
+source_file="res://Weapons/Shotgun/m1014_1.png"
+dest_files=["res://.godot/imported/m1014_1.png-5388cf91ede2a326d96325b69525ee0f.ctex"]
 
 [params]
 
