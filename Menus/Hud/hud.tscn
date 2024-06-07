@@ -1,32 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://c0lgodkbnsq7b"]
+[gd_scene load_steps=4 format=3 uid="uid://c0lgodkbnsq7b"]
 
 [ext_resource type="Script" path="res://Menus/Hud/hud.gd" id="1_om87c"]
-[ext_resource type="Texture2D" uid="uid://jnyy86i026x7" path="res://Weapons/Glock/glock_17_1.png" id="2_mliyk"]
 [ext_resource type="FontFile" uid="uid://crtlhn86rvuuh" path="res://Kurland.otf" id="2_rtyad"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i2mnl"]
-bg_color = Color(0, 0, 0, 0.733333)
-corner_radius_top_left = 9
-corner_radius_top_right = 9
-corner_radius_bottom_right = 9
-corner_radius_bottom_left = 9
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j3li7"]
-bg_color = Color(0.298039, 0.866667, 0.0941176, 1)
-corner_radius_top_left = 9
-corner_radius_top_right = 9
-corner_radius_bottom_right = 9
-corner_radius_bottom_left = 9
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c6nma"]
-bg_color = Color(0, 0, 0, 0.45098)
-corner_radius_top_left = 9
-corner_radius_top_right = 9
-corner_radius_bottom_right = 9
-corner_radius_bottom_left = 9
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tcvoi"]
-bg_color = Color(1, 0.894118, 0, 1)
+bg_color = Color(0, 1, 0, 1)
 corner_radius_top_left = 9
 corner_radius_top_right = 9
 corner_radius_bottom_right = 9
@@ -40,42 +18,28 @@ offset_left = 422.0
 offset_top = 595.0
 offset_right = 748.0
 offset_bottom = 628.0
-theme_override_styles/background = SubResource("StyleBoxFlat_i2mnl")
 theme_override_styles/fill = SubResource("StyleBoxFlat_j3li7")
 max_value = 200.0
-value = 200.0
 show_percentage = false
 
 [node name="Ammo" type="Label" parent="."]
-offset_left = 978.0
+offset_left = 992.0
 offset_top = 568.0
 offset_right = 1140.0
 offset_bottom = 638.0
 theme_override_fonts/font = ExtResource("2_rtyad")
 theme_override_font_sizes/font_size = 51
-text = "99/ 99"
 horizontal_alignment = 2
 vertical_alignment = 1
 
-[node name="Gun" type="TextureRect" parent="."]
-offset_left = 925.0
-offset_top = 599.0
-offset_right = 1513.0
-offset_bottom = 1008.0
-rotation = -0.616905
-scale = Vector2(0.124683, 0.124683)
-texture = ExtResource("2_mliyk")
-flip_h = true
-
-[node name="XpBar" type="ProgressBar" parent="."]
-offset_left = 429.0
-offset_top = 588.0
-offset_right = 741.0
-offset_bottom = 592.0
-theme_override_styles/background = SubResource("StyleBoxFlat_c6nma")
-theme_override_styles/fill = SubResource("StyleBoxFlat_tcvoi")
-value = 100.0
-show_percentage = false
+[node name="WeaponImage" type="TextureRect" parent="."]
+unique_name_in_owner = true
+offset_left = 825.0
+offset_top = 562.0
+offset_right = 993.0
+offset_bottom = 634.0
+expand_mode = 5
+stretch_mode = 5
 
 [node name="Label" type="Label" parent="."]
 offset_right = 109.0

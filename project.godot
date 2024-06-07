@@ -27,8 +27,11 @@ AudioPlayer="*res://Sounds/audio_player.tscn"
 
 [display]
 
+<<<<<<< HEAD
 window/size/mode=3
 window/size/resizable=false
+=======
+>>>>>>> 84f05691369358f56f00bcb201197c52fc78faf5
 mouse_cursor/custom_image="res://Images/CrossHair.png"
 mouse_cursor/custom_image_hotspot=Vector2(16, 16)
 
