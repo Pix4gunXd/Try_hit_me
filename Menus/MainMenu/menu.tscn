@@ -12,7 +12,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("TryHitMeLabel2:position")
+tracks/0/path = NodePath("HBoxContainer/TryHitMeLabel2:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -37,9 +37,16 @@ grow_vertical = 2
 script = ExtResource("1_1mu1r")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 0
-offset_right = 1153.0
-offset_bottom = 647.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -19.0
+offset_top = -21.0
+offset_right = 14.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
@@ -96,13 +103,28 @@ text = "Quit"
 flat = true
 
 [node name="Button" type="Button" parent="."]
-layout_mode = 0
-offset_top = 612.0
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -34.0
 offset_right = 158.0
-offset_bottom = 646.0
+grow_vertical = 0
 text = "DEV_TEST"
 
-[node name="TryHitMeLabel2" type="Sprite2D" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -576.0
+offset_right = 576.0
+offset_bottom = 324.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="TryHitMeLabel2" type="Sprite2D" parent="HBoxContainer"]
 position = Vector2(571, 203.255)
 scale = Vector2(1.254, 1.226)
 texture = ExtResource("3_k5ug8")

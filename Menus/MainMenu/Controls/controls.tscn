@@ -12,7 +12,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("TryHitMeLabel2:position")
+tracks/0/path = NodePath("HBoxContainer/TryHitMeLabel2:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -37,24 +37,29 @@ grow_vertical = 2
 script = ExtResource("1_3au0f")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 0
-offset_right = 1153.0
-offset_bottom = 647.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = -1
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 0.65
 anchor_right = 0.5
-anchor_bottom = 0.5
+anchor_bottom = 0.65
 offset_left = -292.0
-offset_top = 4.5
+offset_top = -141.2
 offset_right = 292.0
-offset_bottom = 139.5
+offset_bottom = 140.8
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 25
+alignment = 1
 
 [node name="Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
@@ -77,17 +82,36 @@ theme_override_font_sizes/font_size = 36
 text = "1,2,3 - Change weapon"
 horizontal_alignment = 1
 
-[node name="TryHitMeLabel2" type="Sprite2D" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -576.0
+offset_right = 576.0
+offset_bottom = 324.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="TryHitMeLabel2" type="Sprite2D" parent="HBoxContainer"]
 position = Vector2(571, 196.814)
 scale = Vector2(1.254, 1.226)
 texture = ExtResource("3_lqd06")
 
 [node name="Back" type="Button" parent="."]
-layout_mode = 0
-offset_left = 491.0
-offset_top = 583.0
-offset_right = 660.0
-offset_bottom = 618.0
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -85.0
+offset_top = -65.0
+offset_right = 84.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_ft0s7")

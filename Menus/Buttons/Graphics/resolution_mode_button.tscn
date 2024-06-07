@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dsqd6m18p1xma"]
+
+[ext_resource type="PackedScene" uid="uid://dm475ojqrfql0" path="res://Menus/Buttons/Graphics/options_display_button.tscn" id="1_hm24n"]
+[ext_resource type="Script" path="res://Menus/Buttons/Graphics/Resolution_mode_button.gd" id="2_iytbw"]
+[ext_resource type="FontFile" uid="uid://crtlhn86rvuuh" path="res://Kurland.otf" id="3_u720t"]
+
+[node name="Resolution_mode_button" instance=ExtResource("1_hm24n")]
+script = ExtResource("2_iytbw")
+
+[node name="Label" parent="HBoxContainer" index="0"]
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 35
+text = "Resolution"
+
+[node name="OptionButton" parent="HBoxContainer" index="2"]
+custom_minimum_size = Vector2(200, 0)
+theme_override_fonts/font = ExtResource("3_u720t")
