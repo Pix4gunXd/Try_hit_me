@@ -4,7 +4,7 @@ var max_ammo = 21
 var ammo = max_ammo
 var dmg = 15
 var is_reloading = false
-var shoot_delay = 0.09
+var shoot_delay = 0.08
 var time_since_last_shot = 0.0
 
 func _ready():
@@ -22,9 +22,9 @@ func shoot():
 	new_bullet.global_position = %ShootingPoint.global_position
 	new_bullet.global_rotation = %ShootingPoint.global_rotation
 
-	new_bullet.weapon = self
+	new_bullet.dmg = dmg  # Assign weapon damage to the bullet
 
-	%ShootingPoint.add_child(new_bullet)
+	get_tree().root.add_child(new_bullet)  # Add to scene root or a dedicated node
 
 	ammo -= 1
 
@@ -39,7 +39,7 @@ func reload():
 
 # SIGNALS
 
-func _on_reload_timer_timeout():
+func _on_Reload_timer_timeout():
 	is_reloading = false
 
 func _process(delta):
