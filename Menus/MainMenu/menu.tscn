@@ -102,16 +102,6 @@ theme_override_font_sizes/font_size = 35
 text = "Quit"
 flat = true
 
-[node name="Button" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_top = -34.0
-offset_right = 158.0
-grow_vertical = 0
-text = "DEV_TEST"
-
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = -1
@@ -145,4 +135,3 @@ stream = ExtResource("4_kggym")
 [connection signal="pressed" from="VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
 [connection signal="mouse_entered" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

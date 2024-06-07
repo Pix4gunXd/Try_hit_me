@@ -17,5 +17,5 @@ func add_ressolution_items() -> void:
 	for resolution_size_text in RESOLUTION_DICTIONARY:
 		option_button.add_item(resolution_size_text)
 
-func on_resolution_selected(index : int) -> void: 
+func on_resolution_selected(index : int) -> void:
 	DisplayServer.window_set_size(RESOLUTION_DICTIONARY.values()[index])
