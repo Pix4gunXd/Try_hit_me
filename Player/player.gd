@@ -93,3 +93,4 @@ func switch_weapon(weapon_number):
 		current_weapon.position = Vector2.ZERO # Adjust the position as necessary
 
 #SIGNALS
+
