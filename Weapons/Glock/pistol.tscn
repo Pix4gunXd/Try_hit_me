@@ -52,7 +52,7 @@ texture = ExtResource("3_tgx6l")
 
 [node name="ShootingPoint" type="Marker2D" parent="Marker2D"]
 unique_name_in_owner = true
-position = Vector2(63.1248, -10.2597)
+position = Vector2(62.1249, -10.2715)
 rotation = 0.0056614
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

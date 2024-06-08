@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mrpl8esds270"
-path="res://.godot/imported/m1014 1.png-3c2a7fbcb019270a38660e89758d35b3.ctex"
+uid="uid://bvbjava27fymv"
+path="res://.godot/imported/drone_gun.png-744fc30a2b5eb19b5fd9bda610c3ab49.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Weapons/Shotgun/m1014 1.png"
-dest_files=["res://.godot/imported/m1014 1.png-3c2a7fbcb019270a38660e89758d35b3.ctex"]
+source_file="res://Enemies/Level_1/Drone/drone_gun.png"
+dest_files=["res://.godot/imported/drone_gun.png-744fc30a2b5eb19b5fd9bda610c3ab49.ctex"]
 
 [params]
 
