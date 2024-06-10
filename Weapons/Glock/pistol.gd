@@ -28,11 +28,11 @@ func reload():
 		return
 	
 	is_reloading = true
-	ammo = max_ammo
 	%Reload_timer.start()
 	%AnimationPlayer.play("reload")
 
 # SIGNALS
 
-func _on_Reload_timer_timeout():
+func _on_reload_timer_timeout():
 	is_reloading = false
+	ammo = max_ammo
