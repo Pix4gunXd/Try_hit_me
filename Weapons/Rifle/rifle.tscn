@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://c3ltrerq5fftw"]
 
 [ext_resource type="Script" path="res://Weapons/Rifle/rifle.gd" id="1_h5pw7"]
-[ext_resource type="Texture2D" uid="uid://pwp2kkkoy03w" path="res://Characteres/Null_C/images/arm.png" id="1_syiff"]
+[ext_resource type="Texture2D" uid="uid://pwp2kkkoy03w" path="res://Characters/Null_C/images/arm.png" id="1_syiff"]
 [ext_resource type="Texture2D" uid="uid://b2dpffu0ms5fj" path="res://Weapons/Rifle/Rifle_01.png" id="2_qa0hb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4n2cq"]

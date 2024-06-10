@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Weapons/Glock/pistol.gd" id="1_i28cd"]
 [ext_resource type="Texture2D" uid="uid://jnyy86i026x7" path="res://Weapons/Glock/glock_17_1.png" id="2_ormr1"]
-[ext_resource type="Texture2D" uid="uid://pwp2kkkoy03w" path="res://Characteres/Null_C/images/arm.png" id="3_tgx6l"]
+[ext_resource type="Texture2D" uid="uid://pwp2kkkoy03w" path="res://Characters/Null_C/images/arm.png" id="3_tgx6l"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_8euar"]
 a = Vector2(8, 33)

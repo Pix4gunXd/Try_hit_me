@@ -1,10 +1,10 @@
 [gd_scene load_steps=9 format=3 uid="uid://il3ijeiqoruh"]
 
-[ext_resource type="Script" path="res://Characteres/Bobot/bobot.gd" id="1_5rfs3"]
-[ext_resource type="Texture2D" uid="uid://4jdkwifiqteq" path="res://Characteres/Bobot/Images/robot_arm.png" id="2_7egnu"]
-[ext_resource type="Texture2D" uid="uid://bf1wh4ryorqmq" path="res://Characteres/Bobot/Images/robot_body.png" id="3_6wy57"]
-[ext_resource type="Texture2D" uid="uid://bgxbnuiay1314" path="res://Characteres/Bobot/Images/robot_head.png" id="4_aash1"]
-[ext_resource type="Texture2D" uid="uid://05dpdyr730ha" path="res://Characteres/Bobot/Images/robot_tread.png" id="5_ee0ot"]
+[ext_resource type="Script" path="res://Characters/Bobot/bobot.gd" id="1_5rfs3"]
+[ext_resource type="Texture2D" uid="uid://4jdkwifiqteq" path="res://Characters/Bobot/Images/robot_arm.png" id="2_7egnu"]
+[ext_resource type="Texture2D" uid="uid://bf1wh4ryorqmq" path="res://Characters/Bobot/Images/robot_body.png" id="3_6wy57"]
+[ext_resource type="Texture2D" uid="uid://bgxbnuiay1314" path="res://Characters/Bobot/Images/robot_head.png" id="4_aash1"]
+[ext_resource type="Texture2D" uid="uid://05dpdyr730ha" path="res://Characters/Bobot/Images/robot_tread.png" id="5_ee0ot"]
 
 [sub_resource type="Animation" id="Animation_mygv0"]
 resource_name = "Walk"

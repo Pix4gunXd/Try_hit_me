@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bf1wh4ryorqmq"
-path="res://.godot/imported/robot_body.png-e812adb68327a28307971497c943252b.ctex"
+uid="uid://xd2lirgwxsjl"
+path="res://.godot/imported/robot_batton.png-a6dc961dcac651c295d92eca771a18a9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characteres/Bobot/Images/robot_body.png"
-dest_files=["res://.godot/imported/robot_body.png-e812adb68327a28307971497c943252b.ctex"]
+source_file="res://Characters/Bobot/Images/robot_batton.png"
+dest_files=["res://.godot/imported/robot_batton.png-a6dc961dcac651c295d92eca771a18a9.ctex"]
 
 [params]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://doefov8rg3lce"]
 
-[ext_resource type="PackedScene" uid="uid://il3ijeiqoruh" path="res://Characteres/Bobot/bobot.tscn" id="1_0xq6y"]
+[ext_resource type="PackedScene" uid="uid://il3ijeiqoruh" path="res://Characters/Bobot/bobot.tscn" id="1_0xq6y"]
 [ext_resource type="Script" path="res://Enemies/Level_1/Drone/e_drone.gd" id="1_3ala8"]
 [ext_resource type="Texture2D" uid="uid://bvbjava27fymv" path="res://Enemies/Level_1/Drone/drone_gun.png" id="3_ss6ni"]
 

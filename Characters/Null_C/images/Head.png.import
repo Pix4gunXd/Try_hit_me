@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://05dpdyr730ha"
-path="res://.godot/imported/robot_tread.png-8837777e2d0f4c5e7260459976790a2f.ctex"
+uid="uid://d2wjssxb1l3hg"
+path="res://.godot/imported/Head.png-92d9b6caa255a3e6915aaaa631b031d0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characteres/Bobot/Images/robot_tread.png"
-dest_files=["res://.godot/imported/robot_tread.png-8837777e2d0f4c5e7260459976790a2f.ctex"]
+source_file="res://Characters/Null_C/images/Head.png"
+dest_files=["res://.godot/imported/Head.png-92d9b6caa255a3e6915aaaa631b031d0.ctex"]
 
 [params]
 

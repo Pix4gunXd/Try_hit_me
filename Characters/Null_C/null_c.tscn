@@ -1,11 +1,11 @@
 [gd_scene load_steps=10 format=3 uid="uid://cxxeiqfuatwlt"]
 
-[ext_resource type="Texture2D" uid="uid://cnsv2yo4y5of4" path="res://Characteres/Null_C/images/leg.png" id="1_37etq"]
-[ext_resource type="Script" path="res://Characteres/Null_C/null_c.gd" id="1_ksirf"]
-[ext_resource type="Texture2D" uid="uid://pwp2kkkoy03w" path="res://Characteres/Null_C/images/arm.png" id="2_qp3oo"]
-[ext_resource type="Texture2D" uid="uid://fnybl0qd2q4x" path="res://Characteres/Null_C/images/Body.png" id="3_e0p23"]
-[ext_resource type="Texture2D" uid="uid://d2wjssxb1l3hg" path="res://Characteres/Null_C/images/Head.png" id="4_pekeu"]
-[ext_resource type="Texture2D" uid="uid://b3cgrqhb4alw8" path="res://Characteres/Null_C/images/Body2.png" id="5_hota7"]
+[ext_resource type="Texture2D" uid="uid://cnsv2yo4y5of4" path="res://Characters/Null_C/images/leg.png" id="1_37etq"]
+[ext_resource type="Script" path="res://Characters/Null_C/null_c.gd" id="1_ksirf"]
+[ext_resource type="Texture2D" uid="uid://pwp2kkkoy03w" path="res://Characters/Null_C/images/arm.png" id="2_qp3oo"]
+[ext_resource type="Texture2D" uid="uid://fnybl0qd2q4x" path="res://Characters/Null_C/images/Body.png" id="3_e0p23"]
+[ext_resource type="Texture2D" uid="uid://d2wjssxb1l3hg" path="res://Characters/Null_C/images/Head.png" id="4_pekeu"]
+[ext_resource type="Texture2D" uid="uid://b3cgrqhb4alw8" path="res://Characters/Null_C/images/Body2.png" id="5_hota7"]
 
 [sub_resource type="Animation" id="Animation_qdeug"]
 resource_name = "idle"
