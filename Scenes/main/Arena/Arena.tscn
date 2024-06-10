@@ -3,11 +3,11 @@
 [ext_resource type="PackedScene" uid="uid://booyxkl3io48e" path="res://Player/player.tscn" id="1_7wftd"]
 [ext_resource type="Script" path="res://Scenes/main/Arena/SpawnEnemies.gd" id="1_no6j3"]
 [ext_resource type="Texture2D" uid="uid://cwxv47084lqbs" path="res://Images/BG.png" id="2_gjvsv"]
-[ext_resource type="PackedScene" uid="uid://glxegwgy8l1s" path="res://Menus/MainMenu/pause_menu.tscn" id="3_5qv5s"]
+[ext_resource type="PackedScene" uid="uid://glxegwgy8l1s" path="res://Menus/Hud/pause_menu.tscn" id="4_ayghk"]
 
 [sub_resource type="Curve2D" id="Curve2D_dc17w"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -302, -2529, 0, 0, 0, 0, -282, 223, 0, 0, 0, 0, 4109.61, 213.385, 0, 0, 0, 0, 4093, -2519, 0, 0, 0, 0, -198, -2537)
+"points": PackedVector2Array(0, 0, 0, 0, -1027.42, -3121.97, 0, 0, 0, 0, -1060.65, 830.093, 0, 0, 0, 0, 5063.92, 822.161, 0, 0, 0, 0, 5095.3, -3127.92, 0, 0, 0, 0, -1029.27, -3127.92)
 }
 point_count = 5
 
@@ -28,7 +28,7 @@ offset_bottom = -1.0
 mouse_filter = 2
 color = Color(0.372549, 0.372549, 0.372549, 1)
 
-[node name="Sprite2D" type="Sprite2D" parent="ColorRect"]
+[node name="Map_Background" type="Sprite2D" parent="ColorRect"]
 position = Vector2(1863, 1166)
 scale = Vector2(1.79255, 1.76417)
 texture = ExtResource("2_gjvsv")
@@ -39,8 +39,8 @@ scale = Vector2(0.541752, 0.504293)
 curve = SubResource("Curve2D_dc17w")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="ColorRect/Path2D"]
-position = Vector2(-302, -2529)
-rotation = 1.56353
+position = Vector2(-1027.42, -3121.97)
+rotation = 1.5792
 
 [node name="Player" parent="." instance=ExtResource("1_7wftd")]
 position = Vector2(1867, -1160)
@@ -81,7 +81,7 @@ shape = SubResource("RectangleShape2D_6mtcr")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("3_5qv5s")]
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("4_ayghk")]
 visible = false
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

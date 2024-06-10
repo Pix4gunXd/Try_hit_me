@@ -139,7 +139,7 @@ offset_bottom = -14.0
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("2_4kkk1")
 theme_override_font_sizes/font_size = 26
-text = "Alpha 0.1.2"
+text = "Alpha 0.1.3"
 
 [connection signal="mouse_entered" from="VBoxContainer/StartButton" to="." method="_on_start_button_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]

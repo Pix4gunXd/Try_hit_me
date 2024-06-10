@@ -108,17 +108,90 @@ tracks/7/keys = {
 
 [sub_resource type="Animation" id="Animation_aejis"]
 resource_name = "hurt"
+length = 0.6
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Anchor:scale")
+tracks/0/path = NodePath("Bobot_Sprite/arm:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4, 0.9),
+"times": PackedFloat32Array(0, 0.2, 0.3, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-136.484, -7.58245), Vector2(-103.966, -22.3632), Vector2(-86.2294, -22.3632), Vector2(-136.484, -7.58245)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Bobot_Sprite/Body:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.5),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(1, 1), Vector2(1.05975, 1.04676), Vector2(1, 1)]
+"values": [Vector2(-18.9562, -3.79123), Vector2(4.693, -3.79123), Vector2(-18.9562, -3.79123)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Bobot_Sprite/Head:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-79.6159, -235.056), Vector2(-38.2299, -235.056), Vector2(-79.6159, -235.056)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Bobot_Sprite/Tread:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-45.4948, 147.858)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Bobot_Sprite/arm:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [-0.0804089, 0.0271167, -0.240568, -0.0804089]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Bobot_Sprite/Body:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.129577, 0.105657, -0.129577]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Bobot_Sprite/Head:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0717772, -0.171405, 0.327973, 0.0717772]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_d3pog"]
@@ -135,23 +208,23 @@ position = Vector2(0, -8)
 scale = Vector2(0.338278, 0.338278)
 
 [node name="arm" type="Sprite2D" parent="Bobot_Sprite"]
-position = Vector2(-77.361, -7.58245)
+position = Vector2(-136.484, -7.58245)
 rotation = -0.0804089
 texture = ExtResource("2_7egnu")
 
 [node name="Body" type="Sprite2D" parent="Bobot_Sprite"]
-position = Vector2(40.1668, -3.79123)
+position = Vector2(-18.9562, -3.79123)
 rotation = -0.129577
 texture = ExtResource("3_6wy57")
 
 [node name="Head" type="Sprite2D" parent="Bobot_Sprite"]
-position = Vector2(-20.4929, -235.056)
+position = Vector2(-79.6159, -235.056)
 rotation = 0.0717772
 scale = Vector2(0.857397, 0.857397)
 texture = ExtResource("4_aash1")
 
 [node name="Tread" type="Sprite2D" parent="Bobot_Sprite"]
-position = Vector2(13.6282, 147.858)
+position = Vector2(-45.4948, 147.858)
 texture = ExtResource("5_ee0ot")
 
 [node name="Anchor" type="Marker2D" parent="."]
