@@ -11,7 +11,9 @@ func _play_music(music: AudioStream, volume = 0.0):
 	play()
 	
 func play_music_bg():
+	if (stream_paused == true):
+		stream_paused = false
 	_play_music(bg_music)
 
 func stop_music_bg():
-	stop()
+	stream_paused = true

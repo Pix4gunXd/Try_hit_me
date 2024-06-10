@@ -1,5 +1,7 @@
 extends Control
 
+
+
 func _ready():
 	AudioPlayer.play_music_bg()
 	$TitleAnimation.play("Title")

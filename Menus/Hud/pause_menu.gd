@@ -2,7 +2,6 @@ extends Control
 
 @onready var arena = $"../../"
 
-
 func _input(event):
 	if event.is_action_pressed("pause"):
 		var new_pause_state = not get_tree().paused
@@ -19,6 +18,7 @@ func _on_restart_pressed():
 
 func _on_main_menu_pressed():
 	get_tree().paused = not get_tree().paused
+	AudioPlayer.play_music_bg()
 	get_tree().change_scene_to_file("res://Menus/MainMenu/menu.tscn")
 
 func _on_quit_pressed():
