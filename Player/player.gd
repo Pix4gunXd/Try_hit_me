@@ -75,6 +75,8 @@ func save_current_ammo():
 	if current_weapon:
 		ammo_counts[current_weapon_index] = current_weapon.ammo
 
+#-------------------------------------------------------------------------------------------
+
 func _physics_process(_delta):
 	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	velocity = direction * 500

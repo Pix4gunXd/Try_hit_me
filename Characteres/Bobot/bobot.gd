@@ -7,4 +7,4 @@ func play_walk_animation():
 
 func play_hurt():
 	%AnimationPlayer.play("hurt")
-	%AnimationPlayer.queue("walk")
+	%AnimationPlayer.queue("Walk")

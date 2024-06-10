@@ -1,5 +1,7 @@
 extends Node2D
 
+# @CaioP: O canvasLayer serve para qualquer lugar que o player estiver o PauseMenu irá aparecer
+
 # Variável para contar o número de inimigos
 var enemy_count = 0
 # Limite máximo de inimigos

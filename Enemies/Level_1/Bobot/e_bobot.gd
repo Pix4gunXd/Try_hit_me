@@ -14,6 +14,10 @@ var contato_player = false
 var desired_distance = 60.0  # Distance to maintain from the player
 var separation_strength = 200.0  # Strength of the separation force
 
+func _ready():
+	$Bobot.play_walk_animation()
+
+
 @warning_ignore("unused_parameter")
 func _physics_process(delta):
 	var direction = global_position.direction_to(player.global_position)
@@ -32,7 +36,6 @@ func _physics_process(delta):
 	walk_face()
 
 func walk_face():
-	$Bobot.play_walk_animation()
 	
 	if velocity.x > 0:
 		$Bobot.scale.x = -1  # Inverte o nó horizontalmente

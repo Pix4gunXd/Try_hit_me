@@ -19,6 +19,7 @@ script = ExtResource("1_hsv61")
 
 [node name="Bobot" parent="." instance=ExtResource("1_p7kik")]
 unique_name_in_owner = true
+position = Vector2(19.3918, 0)
 
 [node name="Hurtbox" type="Area2D" parent="."]
 unique_name_in_owner = true
