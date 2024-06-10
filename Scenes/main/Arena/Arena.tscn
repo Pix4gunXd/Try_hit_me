@@ -1,7 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://g6utxpjj2a1q"]
+[gd_scene load_steps=8 format=3 uid="uid://g6utxpjj2a1q"]
 
 [ext_resource type="PackedScene" uid="uid://booyxkl3io48e" path="res://Player/player.tscn" id="1_7wftd"]
 [ext_resource type="Script" path="res://Scenes/main/Arena/SpawnEnemies.gd" id="1_no6j3"]
+[ext_resource type="Texture2D" uid="uid://cwxv47084lqbs" path="res://Images/BG.png" id="2_gjvsv"]
+[ext_resource type="PackedScene" uid="uid://glxegwgy8l1s" path="res://Menus/MainMenu/pause_menu.tscn" id="3_5qv5s"]
 
 [sub_resource type="Curve2D" id="Curve2D_dc17w"]
 _data = {
@@ -10,10 +12,10 @@ _data = {
 point_count = 5
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q7mq4"]
-size = Vector2(3850, 59)
+size = Vector2(3850, 54)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6mtcr"]
-size = Vector2(64.5, 2460.5)
+size = Vector2(64.5, 2465)
 
 [node name="Arena" type="Node2D"]
 script = ExtResource("1_no6j3")
@@ -27,7 +29,9 @@ mouse_filter = 2
 color = Color(0.372549, 0.372549, 0.372549, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="ColorRect"]
-position = Vector2(-2, 2356)
+position = Vector2(1863, 1166)
+scale = Vector2(1.79255, 1.76417)
+texture = ExtResource("2_gjvsv")
 
 [node name="Path2D" type="Path2D" parent="ColorRect"]
 position = Vector2(818.609, 1758.39)
@@ -50,7 +54,7 @@ position = Vector2(294, 312)
 constant_linear_velocity = Vector2(20, 20)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TopBoundary"]
-position = Vector2(1633, -2693.5)
+position = Vector2(1633, -2691)
 shape = SubResource("RectangleShape2D_q7mq4")
 
 [node name="BottomBoundary" type="StaticBody2D" parent="."]
@@ -72,7 +76,12 @@ shape = SubResource("RectangleShape2D_6mtcr")
 position = Vector2(1395, 340)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RightBoundary"]
-position = Vector2(2489.25, -1512.25)
+position = Vector2(2489.25, -1514.5)
 shape = SubResource("RectangleShape2D_6mtcr")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("3_5qv5s")]
+visible = false
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

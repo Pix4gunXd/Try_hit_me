@@ -127,6 +127,20 @@ libraries = {
 [node name="ButtonHover" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_kggym")
 
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 13.0
+offset_top = -42.0
+offset_right = 136.0
+offset_bottom = -14.0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_4kkk1")
+theme_override_font_sizes/font_size = 26
+text = "Alpha 0.1.2"
+
 [connection signal="mouse_entered" from="VBoxContainer/StartButton" to="." method="_on_start_button_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="mouse_entered" from="VBoxContainer/ControlsButton" to="." method="_on_controls_button_mouse_entered"]

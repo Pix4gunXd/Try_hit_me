@@ -12,3 +12,6 @@ func _play_music(music: AudioStream, volume = 0.0):
 	
 func play_music_bg():
 	_play_music(bg_music)
+
+func stop_music_bg():
+	stop()

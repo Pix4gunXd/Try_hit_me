@@ -43,6 +43,7 @@ folder_colors={
 "res://Images/": "green",
 "res://Menus/": "teal",
 "res://Player/": "blue",
+"res://Scenes/": "yellow",
 "res://Scenes/World/": "orange",
 "res://Scenes/main/": "yellow",
 "res://Scenes/objects/": "gray",

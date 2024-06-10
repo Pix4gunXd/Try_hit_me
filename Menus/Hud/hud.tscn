@@ -4,7 +4,7 @@
 [ext_resource type="FontFile" uid="uid://crtlhn86rvuuh" path="res://Kurland.otf" id="2_rtyad"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j3li7"]
-bg_color = Color(0, 1, 0, 1)
+bg_color = Color(0.141176, 0.952941, 0, 1)
 corner_radius_top_left = 9
 corner_radius_top_right = 9
 corner_radius_bottom_right = 9
@@ -23,6 +23,8 @@ offset_left = -163.216
 offset_top = -70.0
 offset_right = 162.784
 offset_bottom = -37.0
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("2_rtyad")
 theme_override_styles/fill = SubResource("StyleBoxFlat_j3li7")
 max_value = 200.0
 show_percentage = false
@@ -46,7 +48,7 @@ offset_right = 173.0
 offset_bottom = 34.0
 theme_override_fonts/font = ExtResource("2_rtyad")
 theme_override_font_sizes/font_size = 31
-text = "Alpha v 0.1.0"
+text = "Alpha v 0.1.1"
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 anchors_preset = 3

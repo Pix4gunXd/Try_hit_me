@@ -1,14 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://glxegwgy8l1s"]
+[gd_scene load_steps=4 format=3 uid="uid://glxegwgy8l1s"]
 
 [ext_resource type="FontFile" uid="uid://crtlhn86rvuuh" path="res://Kurland.otf" id="1_vi2vj"]
+[ext_resource type="Script" path="res://Menus/Hud/pause_menu.gd" id="1_y7dhu"]
+[ext_resource type="Texture2D" uid="uid://c6q20ga25ngvv" path="res://Images/Try Hit Me_label2.png" id="3_tc34t"]
 
 [node name="PauseMenu" type="Control"]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_y7dhu")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -17,23 +21,39 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 0.65098)
+color = Color(0, 0, 0, 0.756863)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.583
+anchor_right = 0.5
+anchor_bottom = 0.583
+offset_left = -117.5
+offset_top = -148.784
+offset_right = 117.5
+offset_bottom = 149.216
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.733333)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect2"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -94.0
-offset_top = -33.0
-offset_right = 94.0
-offset_bottom = 33.0
+offset_left = -90.5
+offset_top = -126.5
+offset_right = 90.5
+offset_bottom = 126.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 20
 
-[node name="Resume" type="Button" parent="VBoxContainer"]
+[node name="Resume" type="Button" parent="ColorRect2/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 0.443137)
@@ -42,12 +62,55 @@ theme_override_font_sizes/font_size = 41
 text = "Resume"
 flat = true
 
-[node name="Quit" type="Button" parent="VBoxContainer"]
+[node name="Restart" type="Button" parent="ColorRect2/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 0.443137)
 theme_override_fonts/font = ExtResource("1_vi2vj")
 theme_override_font_sizes/font_size = 36
+text = "Restart"
+flat = true
+
+[node name="MainMenu" type="Button" parent="ColorRect2/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 0.443137)
+theme_override_fonts/font = ExtResource("1_vi2vj")
+theme_override_font_sizes/font_size = 36
+text = "Main Menu"
+flat = true
+
+[node name="Quit" type="Button" parent="ColorRect2/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_vi2vj")
+theme_override_font_sizes/font_size = 36
 text = "Quit
 "
 flat = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.25
+anchor_right = 0.5
+anchor_bottom = 0.25
+offset_left = -576.0
+offset_top = -162.0
+offset_right = 576.0
+offset_bottom = 162.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="TryHitMeLabel2" type="Sprite2D" parent="HBoxContainer"]
+position = Vector2(571, 121.255)
+scale = Vector2(1.254, 1.226)
+texture = ExtResource("3_tc34t")
+
+[connection signal="pressed" from="ColorRect2/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="ColorRect2/VBoxContainer/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="ColorRect2/VBoxContainer/MainMenu" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="ColorRect2/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
