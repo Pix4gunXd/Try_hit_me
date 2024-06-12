@@ -1,11 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://g6utxpjj2a1q"]
+[gd_scene load_steps=9 format=3 uid="uid://g6utxpjj2a1q"]
 
 [ext_resource type="PackedScene" uid="uid://booyxkl3io48e" path="res://Player/player.tscn" id="1_7wftd"]
 [ext_resource type="Script" path="res://Scenes/main/Arena/SpawnEnemies.gd" id="1_no6j3"]
 [ext_resource type="Texture2D" uid="uid://cwxv47084lqbs" path="res://Images/BG.png" id="2_gjvsv"]
 [ext_resource type="PackedScene" uid="uid://glxegwgy8l1s" path="res://Menus/Hud/pause_menu.tscn" id="4_ayghk"]
 [ext_resource type="PackedScene" uid="uid://cfjbo1lfcsiqu" path="res://Menus/Hud/game_over.tscn" id="5_xli8l"]
-[ext_resource type="Texture2D" uid="uid://bremyagomc4x6" path="res://Images/wall.png" id="6_f66ag"]
 
 [sub_resource type="Curve2D" id="Curve2D_dc17w"]
 _data = {
@@ -28,10 +27,9 @@ offset_top = -2356.0
 offset_right = 3852.0
 offset_bottom = -1.0
 mouse_filter = 2
-color = Color(1, 1, 1, 0)
+color = Color(0.372549, 0.372549, 0.372549, 1)
 
 [node name="Map_Background" type="Sprite2D" parent="ColorRect"]
-z_index = -2
 position = Vector2(1863, 1166)
 scale = Vector2(1.79255, 1.76417)
 texture = ExtResource("2_gjvsv")
@@ -54,8 +52,6 @@ autostart = true
 
 [node name="TopBoundary" type="StaticBody2D" parent="."]
 position = Vector2(294, 312)
-collision_layer = 3
-collision_mask = 3
 constant_linear_velocity = Vector2(20, 20)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TopBoundary"]
@@ -64,8 +60,6 @@ shape = SubResource("RectangleShape2D_q7mq4")
 
 [node name="BottomBoundary" type="StaticBody2D" parent="."]
 position = Vector2(284, 2721)
-collision_layer = 3
-collision_mask = 3
 constant_linear_velocity = Vector2(20, 20)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BottomBoundary"]
@@ -74,8 +68,6 @@ shape = SubResource("RectangleShape2D_q7mq4")
 
 [node name="LeftBoundary" type="StaticBody2D" parent="."]
 position = Vector2(1252, 330)
-collision_layer = 3
-collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LeftBoundary"]
 position = Vector2(-1284.5, -1504.5)
@@ -83,8 +75,6 @@ shape = SubResource("RectangleShape2D_6mtcr")
 
 [node name="RightBoundary" type="StaticBody2D" parent="."]
 position = Vector2(1395, 340)
-collision_layer = 3
-collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RightBoundary"]
 position = Vector2(2489.25, -1514.5)
@@ -98,81 +88,5 @@ visible = false
 [node name="GameOver" parent="CanvasLayer" instance=ExtResource("5_xli8l")]
 unique_name_in_owner = true
 visible = false
-
-[node name="Paredes" type="TextureRect" parent="."]
-offset_left = -51.0
-offset_top = -2410.0
-offset_right = 3915.0
-offset_bottom = 40.0
-
-[node name="Wall" type="Sprite2D" parent="Paredes"]
-position = Vector2(16, 525)
-texture = ExtResource("6_f66ag")
-
-[node name="Wall2" type="Sprite2D" parent="Paredes"]
-position = Vector2(16, 1525)
-texture = ExtResource("6_f66ag")
-
-[node name="Wall3" type="Sprite2D" parent="Paredes"]
-position = Vector2(16, 1947)
-texture = ExtResource("6_f66ag")
-
-[node name="Wall8" type="Sprite2D" parent="Paredes"]
-position = Vector2(3936, 525)
-texture = ExtResource("6_f66ag")
-
-[node name="Wall9" type="Sprite2D" parent="Paredes"]
-position = Vector2(3936, 1525)
-texture = ExtResource("6_f66ag")
-
-[node name="Wall10" type="Sprite2D" parent="Paredes"]
-position = Vector2(3936, 1947)
-texture = ExtResource("6_f66ag")
-
-[node name="Wall4" type="Sprite2D" parent="Paredes"]
-position = Vector2(510, 2444)
-rotation = 1.5708
-texture = ExtResource("6_f66ag")
-
-[node name="Wall5" type="Sprite2D" parent="Paredes"]
-position = Vector2(1494, 2444)
-rotation = 1.5708
-texture = ExtResource("6_f66ag")
-
-[node name="Wall6" type="Sprite2D" parent="Paredes"]
-position = Vector2(2478, 2444)
-rotation = 1.5708
-texture = ExtResource("6_f66ag")
-
-[node name="Wall7" type="Sprite2D" parent="Paredes"]
-position = Vector2(3451.41, 2444)
-rotation = 1.5708
-scale = Vector2(1, 0.977782)
-texture = ExtResource("6_f66ag")
-
-[node name="Wall11" type="Sprite2D" parent="Paredes"]
-z_index = -1
-position = Vector2(510, 36)
-rotation = 1.5708
-texture = ExtResource("6_f66ag")
-
-[node name="Wall12" type="Sprite2D" parent="Paredes"]
-z_index = -1
-position = Vector2(1494, 36)
-rotation = 1.5708
-texture = ExtResource("6_f66ag")
-
-[node name="Wall13" type="Sprite2D" parent="Paredes"]
-z_index = -1
-position = Vector2(2478, 36)
-rotation = 1.5708
-texture = ExtResource("6_f66ag")
-
-[node name="Wall14" type="Sprite2D" parent="Paredes"]
-z_index = -1
-position = Vector2(3451.41, 36)
-rotation = 1.5708
-scale = Vector2(1, 0.977782)
-texture = ExtResource("6_f66ag")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

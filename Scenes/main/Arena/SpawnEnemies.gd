@@ -1,6 +1,14 @@
 extends Node2D
 
 # @CaioP: O canvasLayer serve para qualquer lugar que o player estiver o PauseMenu irá aparecer
+# Deus, me perdoe por essa aberração que fiz chamada parede...
+
+func _process(delta):
+	if $Player.life <= 0:
+		%GameOver.gameOver()
+	
+	AudioPlayer.stop_music_bg()
+
 
 # Variável para contar o número de inimigos
 var enemy_count = 0
@@ -23,6 +31,7 @@ func spawn_enemy():
 	else:
 		print("Número máximo de inimigos atingido.")
 		get_node("Timer").stop()  # Pare o timer para impedir mais spawns
+
 
 func _on_timer_timeout():
 	spawn_enemy()

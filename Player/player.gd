@@ -64,6 +64,8 @@ func _physics_process(_delta):
 	
 	walk_face()
 	hud()
+	
+	
 
 func walk_face():
 	if velocity.length() > 0.0:
