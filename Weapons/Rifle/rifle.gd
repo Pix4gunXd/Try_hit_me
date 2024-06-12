@@ -21,11 +21,12 @@ func shoot():
 	var new_bullet = BULLET.instantiate()
 	new_bullet.global_position = %ShootingPoint.global_position
 	new_bullet.global_rotation = %ShootingPoint.global_rotation
-
+	
 	new_bullet.dmg = dmg  # Assign weapon damage to the bullet
-
+	
 	get_tree().root.add_child(new_bullet)  # Add to scene root or a dedicated node
-
+	
+	$AnimationPlayer.play("shoot")
 	ammo -= 1
 
 func reload():

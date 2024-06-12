@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cuk3remwc8qav"]
+[gd_scene load_steps=8 format=3 uid="uid://cuk3remwc8qav"]
 
 [ext_resource type="Script" path="res://Weapons/Shotgun/Shotgun.gd" id="1_djg0p"]
 [ext_resource type="Texture2D" uid="uid://mrpl8esds270" path="res://Weapons/Shotgun/m1014_1.png" id="2_kjg6f"]
@@ -10,6 +10,7 @@ b = Vector2(-8, 33)
 
 [sub_resource type="Animation" id="Animation_jte3w"]
 resource_name = "reload"
+length = 1.75
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -17,15 +18,92 @@ tracks/0/path = NodePath("Marker2D:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4, 0.8, 1),
+"times": PackedFloat32Array(0, 0.4, 1.4, 1.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [-0.0117383, 0.559142, 0.559142, -0.0117383]
 }
 
+[sub_resource type="Animation" id="Animation_onxgc"]
+resource_name = "shoot"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Marker2D/Shotgun:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(65.6225, -1.52712), Vector2(60.4029, -22.4598), Vector2(65.6225, -1.52712)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Marker2D/Arm:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(19.9751, 2.23462), Vector2(19.076, -5.77575), Vector2(19.9751, 2.23462)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Marker2D/Shotgun:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-3.12985, -3.45575, -3.12985]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Marker2D/Arm:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-1.55906, -1.91986, -1.55906]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Marker2D/ShootingPoint:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(134.12, -9.42635), Vector2(124.614, -51.5408), Vector2(134.12, -9.42635)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Marker2D/ShootingPoint:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0056614, -0.314159, 0.0056614]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_43qne"]
 _data = {
-"reload": SubResource("Animation_jte3w")
+"reload": SubResource("Animation_jte3w"),
+"shoot": SubResource("Animation_onxgc")
 }
 
 [node name="Shotgun" type="Area2D"]
@@ -65,6 +143,7 @@ libraries = {
 
 [node name="Reload_timer" type="Timer" parent="."]
 unique_name_in_owner = true
+wait_time = 1.75
 one_shot = true
 
 [connection signal="timeout" from="Reload_timer" to="." method="_on_reload_timer_timeout"]

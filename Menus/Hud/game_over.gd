@@ -10,13 +10,15 @@ func gameOver() -> void:
 
 func _on_restart_pressed():
 	get_tree().paused = not get_tree().paused
+	Score.resetScore() #Reinicia o score
 	get_tree().reload_current_scene()
 	
 
 
 func _on_main_menu_pressed():
 		get_tree().paused = not get_tree().paused
-		AudioPlayer.play_music_bg()
+		AudioPlayer.play_music_bg() #Volta a tocar a música
+		Score.resetScore() #Reinicia o score
 		get_tree().change_scene_to_file("res://Menus/MainMenu/menu.tscn")
 
 

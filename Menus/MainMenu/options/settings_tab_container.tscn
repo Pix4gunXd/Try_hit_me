@@ -27,9 +27,11 @@ grow_vertical = 2
 theme_override_fonts/font = ExtResource("1_wv5cf")
 theme_override_font_sizes/font_size = 36
 tab_alignment = 1
+current_tab = 1
 tab_focus_mode = 0
 
 [node name="Graphics" type="TabBar" parent="TabContainer"]
+visible = false
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_wv5cf")
 tab_alignment = 1
@@ -63,7 +65,6 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="Sound" type="TabBar" parent="TabContainer"]
-visible = false
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_wv5cf")
 tab_alignment = 1
@@ -97,3 +98,12 @@ layout_mode = 2
 [node name="Audio_slider_settings3" parent="TabContainer/Sound/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("4_w8r6f")]
 layout_mode = 2
 bus_name = "Sfx"
+
+[node name="Button" type="Button" parent="TabContainer/Sound/MarginContainer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_wv5cf")
+theme_override_font_sizes/font_size = 31
+text = "SFX Test"
+
+[connection signal="pressed" from="TabContainer/Sound/MarginContainer/ScrollContainer/VBoxContainer/Button" to="TabContainer/Sound/MarginContainer/ScrollContainer/VBoxContainer/Audio_slider_settings3" method="_on_button_pressed"]

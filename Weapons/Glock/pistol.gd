@@ -1,5 +1,7 @@
 extends Area2D
 
+const SHOOT_SFX = preload("res://Sounds/Weapons/gun-shot-1.mp3")
+
 var max_ammo = 12
 var ammo = max_ammo
 var dmg = 15
@@ -12,6 +14,8 @@ func shoot():
 	if is_reloading or ammo <= 0:
 		return
 	
+	SfxHandler.play_sfx(SHOOT_SFX, self)
+	
 	const BULLET = preload("res://Weapons/bullet.tscn")
 	var new_bullet = BULLET.instantiate()
 	new_bullet.global_position = %ShootingPoint.global_position
@@ -21,6 +25,7 @@ func shoot():
 	
 	get_tree().root.add_child(new_bullet)  # Add to scene root or a dedicated node
 	
+	$AnimationPlayer.play("shoot")
 	ammo -= 1
 
 func reload():

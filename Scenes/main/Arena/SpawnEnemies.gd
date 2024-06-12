@@ -36,7 +36,12 @@ func spawn_enemy():
 func _on_timer_timeout():
 	spawn_enemy()
 
+func _on_nova_rodada_timeout(): #Loop para inimigos ficarem nascendo a cada 10sec* -> (O intervalo pode ser alterado no TIMER-$NovaRodada)
+	reset_enemy_count()
+
 # Você pode chamar esta função para reiniciar o spawn de inimigos, se necessário
 func reset_enemy_count():
-	enemy_count == 0
+	enemy_count = 0
 	get_node("Timer").start()  # Reinicie o timer para permitir novos spawns
+
+

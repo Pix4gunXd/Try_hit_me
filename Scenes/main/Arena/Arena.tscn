@@ -52,6 +52,10 @@ position = Vector2(1867, -1160)
 wait_time = 0.3
 autostart = true
 
+[node name="NovaRodada" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
+
 [node name="TopBoundary" type="StaticBody2D" parent="."]
 position = Vector2(294, 312)
 collision_layer = 3
@@ -176,3 +180,4 @@ scale = Vector2(1, 0.977782)
 texture = ExtResource("6_f66ag")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="NovaRodada" to="." method="_on_nova_rodada_timeout"]

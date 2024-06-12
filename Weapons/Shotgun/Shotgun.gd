@@ -1,8 +1,8 @@
 extends Area2D
 
-var max_ammo = 8
+var max_ammo = 6 #Lembrando de caso queira mudar a munição, também deve mudar no player as munições bases de cada arma!
 var ammo = max_ammo
-var dmg = 4
+var dmg = 10
 var is_reloading = false
 
 func _physics_process(delta):
@@ -39,6 +39,8 @@ func shoot():
 		new_bullet_below.dmg = dmg  # Assign weapon damage to the bullet
 		
 		get_tree().root.add_child(new_bullet_below)  # Add to scene root or a dedicated node
+	
+	$AnimationPlayer.play("shoot")
 	
 	ammo -= 1
 
