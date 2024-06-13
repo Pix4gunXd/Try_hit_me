@@ -7,7 +7,7 @@ func _process(delta):
 	if $Player.life <= 0:
 		%GameOver.gameOver()
 	
-	AudioPlayer.stop_music_bg()
+	#AudioPlayer.stop_music_bg()
 
 
 # Variável para contar o número de inimigos

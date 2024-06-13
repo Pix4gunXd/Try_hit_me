@@ -5,7 +5,7 @@ func _ready():
 
 func _on_arena_pressed():
 	get_tree().change_scene_to_file("res://Scenes/main/Arena/Arena.tscn")
-	AudioPlayer.stop_music_bg()
+
 
 func _on_arena_mouse_entered():
 	$ButtonHover.play()
