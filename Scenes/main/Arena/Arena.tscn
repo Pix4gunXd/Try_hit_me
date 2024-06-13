@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://g6utxpjj2a1q"]
+[gd_scene load_steps=10 format=3 uid="uid://g6utxpjj2a1q"]
 
 [ext_resource type="PackedScene" uid="uid://booyxkl3io48e" path="res://Player/player.tscn" id="1_7wftd"]
 [ext_resource type="Script" path="res://Scenes/main/Arena/SpawnEnemies.gd" id="1_no6j3"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://glxegwgy8l1s" path="res://Menus/Hud/pause_menu.tscn" id="4_ayghk"]
 [ext_resource type="PackedScene" uid="uid://cfjbo1lfcsiqu" path="res://Menus/Hud/game_over.tscn" id="5_xli8l"]
 [ext_resource type="Texture2D" uid="uid://bremyagomc4x6" path="res://Images/wall.png" id="6_f66ag"]
-[ext_resource type="PackedScene" uid="uid://bqdkvre63705f" path="res://Enemies/Level_1/SpiderBot/e_spider_bot.tscn" id="7_rec48"]
 
 [sub_resource type="Curve2D" id="Curve2D_dc17w"]
 _data = {
@@ -179,9 +178,6 @@ position = Vector2(3451.41, 36)
 rotation = 1.5708
 scale = Vector2(1, 0.977782)
 texture = ExtResource("6_f66ag")
-
-[node name="e_SpiderBot" parent="." instance=ExtResource("7_rec48")]
-position = Vector2(1462, -1132)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="NovaRodada" to="." method="_on_nova_rodada_timeout"]

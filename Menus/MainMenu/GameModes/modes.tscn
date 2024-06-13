@@ -48,16 +48,17 @@ color = Color(0, 0, 0, 1)
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.498
-anchor_top = 0.553
-anchor_right = 0.498
-anchor_bottom = 0.553
-offset_left = -84.696
-offset_top = -30.344
-offset_right = 84.304
-offset_bottom = 30.656
+anchor_left = 0.5
+anchor_top = 0.616
+anchor_right = 0.5
+anchor_bottom = 0.616
+offset_left = -86.0
+offset_top = -68.168
+offset_right = 83.0
+offset_bottom = 67.832
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 14
 
 [node name="Arena" type="Button" parent="VBoxContainer"]
 layout_mode = 2

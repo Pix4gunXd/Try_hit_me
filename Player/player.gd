@@ -4,7 +4,6 @@ extends CharacterBody2D
 
 #------------------------------------------------------------------------
 
-@onready var enemy = preload("res://Enemies/Level_1/Bobot/e_bobot.tscn")
 
 var life = 200.0
 var walking = false
