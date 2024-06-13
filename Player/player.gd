@@ -1,8 +1,13 @@
 extends CharacterBody2D
 
+#Sounds:
+
+#------------------------------------------------------------------------
+
 @onready var enemy = preload("res://Enemies/Level_1/Bobot/e_bobot.tscn")
 
 var life = 200.0
+var walking = false
 
 # Preload your weapon scenes
 var weapon1_scene = preload("res://Weapons/Glock/pistol.tscn")
@@ -12,7 +17,7 @@ var weapon3_scene = preload("res://Weapons/Shotgun/shotgun.tscn")
 # Variable to hold the current weapon node
 var current_weapon = null
 var current_weapon_index = 1
-var ammo_counts = {1: 12, 2: 21, 3: 6}  # Default ammo counts for each weapon
+var ammo_counts = {1: 12, 2: 30, 3: 6}  # Default ammo counts for each weapon
 
 func _ready():
 	switch_weapon(1)

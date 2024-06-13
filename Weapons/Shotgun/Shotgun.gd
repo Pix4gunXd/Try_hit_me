@@ -1,16 +1,26 @@
 extends Area2D
 
+const SHOTGUN = preload("res://Sounds/Weapons/Shotgun.mp3")
+const SHOTGUN_RELOAD = preload("res://Sounds/Weapons/shotgun-reload.mp3")
+
 var max_ammo = 6 #Lembrando de caso queira mudar a munição, também deve mudar no player as munições bases de cada arma!
 var ammo = max_ammo
-var dmg = 10
+var dmg = 8
 var is_reloading = false
 
-func _physics_process(delta):
+func _process(delta):
 	%Marker2D.look_at(get_global_mouse_position())
 
 func shoot():
+	if ammo == 0:
+		reload()
+	
 	if is_reloading or ammo <= 0:
 		return
+	
+	
+	
+	SfxSounds.play_sound(SHOTGUN)
 	
 	const BULLET = preload("res://Weapons/bullet.tscn")
 	var new_bullet = BULLET.instantiate()
@@ -48,6 +58,8 @@ func reload():
 	if is_reloading or ammo == max_ammo:
 		return
 	
+	SfxSounds.play_sound(SHOTGUN_RELOAD)
+	
 	is_reloading = true
 	%Reload_timer.start()
 	%AnimationPlayer.play("reload")
@@ -57,3 +69,4 @@ func reload():
 func _on_reload_timer_timeout():
 	is_reloading = false
 	ammo = max_ammo
+	SfxSounds.stop()

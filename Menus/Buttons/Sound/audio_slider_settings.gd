@@ -38,4 +38,4 @@ func on_value_changed(value : float) -> void:
 
 
 func _on_button_pressed():
-	SfxHandler.play_sfx(SHOOT_SFX, self)
+	SfxSounds.play_sound(SHOOT_SFX)

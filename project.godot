@@ -26,7 +26,7 @@ buses/default_bus_layout="res://Sounds/default_bus_layout.tres"
 
 AudioPlayer="*res://Sounds/audio_player.tscn"
 Score="*res://Scenes/main/score.gd"
-SfxHandler="*res://Scenes/sfx_handler.tscn"
+SfxSounds="*res://Sounds/sfx_sounds.tscn"
 
 [display]
 
