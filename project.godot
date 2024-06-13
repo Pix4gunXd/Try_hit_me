@@ -25,7 +25,7 @@ buses/default_bus_layout="res://Sounds/default_bus_layout.tres"
 [autoload]
 
 AudioPlayer="*res://Sounds/audio_player.tscn"
-Score="*res://Scenes/main/score.gd"
+Score="*res://Scenes/main/Arena/score.gd"
 SfxSounds="*res://Sounds/sfx_sounds.tscn"
 
 [display]
