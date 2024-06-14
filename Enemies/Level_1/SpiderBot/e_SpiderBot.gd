@@ -2,10 +2,10 @@ extends CharacterBody2D
 
 @onready var player = get_node("/root/Arena/Player")
 
-var health = 40
-var dmg = 20
-var dmg_rate = 0.5
-var scoreValue = 5
+var health = 25
+var dmg = 5
+var dmg_rate = 0.75
+var scoreValue = 15
 var contato_player = false
 
 var desired_distance = 60.0  # Distance to maintain from the player
@@ -16,7 +16,7 @@ func _ready():
 
 func _physics_process(delta):
 	var direction = global_position.direction_to(player.global_position)
-	velocity = direction * 400 #CHANGE SPEED HERE
+	velocity = direction * 300 #CHANGE SPEED HERE
 
 	# Apply separation force if too close to the player
 	var to_player = global_position.direction_to(player.global_position)

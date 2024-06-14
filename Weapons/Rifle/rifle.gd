@@ -4,11 +4,11 @@ const BATTLE_RIFLE = preload("res://Sounds/Weapons/battle-rifle.mp3")
 const EMPTY_CLIP = preload("res://Sounds/Weapons/rifle-clip-empty.mp3")
 const RIFLE_RELOAD = preload("res://Sounds/Weapons/rifle-reload.mp3")
 
-var max_ammo = 30
+var max_ammo = 20
 var ammo = max_ammo
-var dmg = 12
+var dmg = 25
 var is_reloading = false
-var shoot_delay = 0.08
+var shoot_delay = 0.1
 var time_since_last_shot = 0.0
 
 func _ready():

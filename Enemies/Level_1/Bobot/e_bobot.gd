@@ -11,7 +11,7 @@ var scoreValue = 10
 var contato_player = false
 
 # Parameters for separation logic
-var desired_distance = 60.0  # Distance to maintain from the player
+var desired_distance = 80.0  # Distance to maintain from the player
 var separation_strength = 200.0  # Strength of the separation force
 
 func _ready():

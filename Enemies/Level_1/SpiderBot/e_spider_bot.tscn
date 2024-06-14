@@ -4,10 +4,10 @@
 [ext_resource type="PackedScene" uid="uid://djnxfcqwdydru" path="res://Characters/SpiderBot/spider_bot.tscn" id="2_u86gs"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_suntx"]
-radius = 70.0643
+radius = 57.0088
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_x5ujo"]
-radius = 61.131
+radius = 52.0384
 
 [node name="e_SpiderBot" type="CharacterBody2D"]
 collision_layer = 3

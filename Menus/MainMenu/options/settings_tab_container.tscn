@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c6poewhoqyleh" path="res://Menus/Buttons/Sound/audio_slider_settings.tscn" id="4_w8r6f"]
 
 [node name="Settings_tab_container" type="Control"]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

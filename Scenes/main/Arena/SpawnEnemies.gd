@@ -1,30 +1,18 @@
 extends Node2D
 
 var enemy_count = 0
-var max_enemies = 10
+var max_enemies = 20
 
 var spider_count = 0
-var max_spiders = 10
+var max_spiders = 20
 
 @warning_ignore("unused_parameter")
 func _process(delta):
 	if $Player.life <= 0:
 		%GameOver.gameOver()
 	
-	#AudioPlayer.stop_music_bg(
+	#AudioPlayer.stop_music_bg()
 	AudioPlayer.stop_music_bg()
-
-
-func _on_timer_timeout():
-	# Decide aleatoriamente qual inimigo spawnar
-	var rand_enemy = randi() % 3  # Gera um número entre 0 e 1
-	match rand_enemy:
-		0:
-			spawn_enemy()
-		1:
-			spawn_spider()
-		2: 
-			spawn_spider()
 
 func spawn_enemy():
 	if enemy_count < max_enemies:
@@ -60,6 +48,15 @@ func _on_nova_rodada_timeout():
 	reset_enemy_count()
 	reset_spider_count()
 
+func _on_timer_timeout():
+	# Decide aleatoriamente qual inimigo spawnar
+	var rand_enemy = randi() % 3  # Gera um número entre 0 e 1
+	match rand_enemy:
+		0:
+			spawn_enemy()
+		1:
+			spawn_spider()
+
 func reset_enemy_count():
 	enemy_count = 0
 	get_node("Timer").start()
@@ -67,3 +64,4 @@ func reset_enemy_count():
 func reset_spider_count():
 	spider_count = 0
 	get_node("Timer").start()
+
