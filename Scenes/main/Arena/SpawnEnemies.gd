@@ -12,7 +12,8 @@ func _process(delta):
 		%GameOver.gameOver()
 	
 	#AudioPlayer.stop_music_bg()
-	AudioPlayer.stop_music_bg()
+	
+
 
 func spawn_enemy():
 	if enemy_count < max_enemies:

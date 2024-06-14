@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cfjbo1lfcsiqu"]
+[gd_scene load_steps=5 format=3 uid="uid://cfjbo1lfcsiqu"]
 
 [ext_resource type="FontFile" uid="uid://crtlhn86rvuuh" path="res://Kurland.otf" id="1_h7q61"]
 [ext_resource type="Script" path="res://Menus/Hud/game_over.gd" id="1_mdl8k"]
 [ext_resource type="Texture2D" uid="uid://dqsh6irat0v23" path="res://Images/bg_test.png" id="3_kdsr7"]
+[ext_resource type="Texture2D" uid="uid://ch5jpbcq0qufo" path="res://Images/Hud/ScoreBrush.png" id="4_e48o5"]
 
 [node name="GameOver" type="Control"]
 process_mode = 3
@@ -27,16 +28,16 @@ color = Color(0, 0, 0, 0.756863)
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
-anchor_top = 0.284
+anchor_top = 0.171
 anchor_right = 0.5
-anchor_bottom = 0.284
-offset_left = -348.5
-offset_top = -97.032
-offset_right = 348.5
-offset_bottom = 96.968
+anchor_bottom = 0.171
+offset_left = -255.0
+offset_top = -75.808
+offset_right = 254.0
+offset_bottom = 75.192
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("1_h7q61")
-theme_override_font_sizes/font_size = 120
+theme_override_font_sizes/font_size = 90
 text = "GAME OVER"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -101,6 +102,94 @@ theme_override_fonts/font = ExtResource("1_h7q61")
 theme_override_font_sizes/font_size = 36
 text = "Quit"
 flat = true
+
+[node name="CenterContainer2" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.503
+anchor_top = 0.358
+anchor_right = 0.503
+anchor_bottom = 0.358
+offset_left = -139.456
+offset_top = -59.984
+offset_right = 141.544
+offset_bottom = 54.016
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScoreBrush" type="Sprite2D" parent="CenterContainer2"]
+position = Vector2(136, 59)
+scale = Vector2(0.261202, 0.261202)
+texture = ExtResource("4_e48o5")
+
+[node name="Score" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.504
+anchor_top = 0.353
+anchor_right = 0.504
+anchor_bottom = 0.353
+offset_left = -112.608
+offset_top = -47.744
+offset_right = 112.392
+offset_bottom = 48.256
+theme_override_fonts/font = ExtResource("1_h7q61")
+theme_override_font_sizes/font_size = 61
+text = "000000"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Score_lbl" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.504
+anchor_top = 0.353
+anchor_right = 0.504
+anchor_bottom = 0.353
+offset_left = -71.608
+offset_top = -84.744
+offset_right = 71.392
+offset_bottom = -19.744
+theme_override_fonts/font = ExtResource("1_h7q61")
+theme_override_font_sizes/font_size = 36
+text = "Score
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HighScore" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.17
+anchor_top = 0.58
+anchor_right = 0.17
+anchor_bottom = 0.58
+offset_left = -112.84
+offset_top = -47.84
+offset_right = 112.16
+offset_bottom = 48.16
+theme_override_fonts/font = ExtResource("1_h7q61")
+theme_override_font_sizes/font_size = 61
+text = "000000"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="High_Score_lbl" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.171
+anchor_top = 0.478
+anchor_right = 0.171
+anchor_bottom = 0.478
+offset_left = -111.992
+offset_top = -47.744
+offset_right = 113.008
+offset_bottom = 48.256
+theme_override_fonts/font = ExtResource("1_h7q61")
+theme_override_font_sizes/font_size = 41
+text = "High Score"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="VBoxContainer/Restart" to="." method="_on_restart_pressed"]
 [connection signal="pressed" from="VBoxContainer/MainMenu" to="." method="_on_main_menu_pressed"]

@@ -10,4 +10,5 @@ func resetScore(): #Reseta a pontuação
 	score = 0
 
 func end_game(): # Atualiza a pontuação maxíma
-	max_score = score
+	if score > max_score:
+		max_score = score

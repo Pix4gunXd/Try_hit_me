@@ -5,7 +5,7 @@ extends CharacterBody2D
 var health = 25
 var dmg = 5
 var dmg_rate = 0.75
-var scoreValue = 15
+var scoreValue = 5
 var contato_player = false
 
 var desired_distance = 60.0  # Distance to maintain from the player
