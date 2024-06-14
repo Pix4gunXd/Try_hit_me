@@ -73,7 +73,7 @@ rotation = 1.57553
 position = Vector2(1867, -1160)
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.5
+wait_time = 0.3
 autostart = true
 
 [node name="NovaRodada" type="Timer" parent="."]

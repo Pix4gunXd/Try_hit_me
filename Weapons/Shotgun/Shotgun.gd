@@ -5,7 +5,7 @@ const SHOTGUN_RELOAD = preload("res://Sounds/Weapons/shotgun-reload.mp3")
 
 var max_ammo = 6 #Lembrando de caso queira mudar a munição, também deve mudar no player as munições bases de cada arma!
 var ammo = max_ammo
-var dmg = 8
+var dmg = 10
 var is_reloading = false
 
 func _process(delta):
