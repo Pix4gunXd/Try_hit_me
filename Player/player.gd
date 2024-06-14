@@ -1,35 +1,24 @@
 extends CharacterBody2D
 
-@onready var enemy = preload("res://Enemies/Level_1/Bobot/e_bobot.tscn")
+#Sounds:
+
+#------------------------------------------------------------------------
+
 
 var life = 200.0
+var walking = false
 
 # Preload your weapon scenes
 var weapon1_scene = preload("res://Weapons/Glock/pistol.tscn")
 var weapon2_scene = preload("res://Weapons/Rifle/rifle.tscn")
 var weapon3_scene = preload("res://Weapons/Shotgun/shotgun.tscn")
 
-# Preload your weapon images
-var weapon1_image = preload("res://Weapons/Glock/glock_17_1.png")
-var weapon2_image = preload("res://Weapons/Rifle/Rifle_01.png")
-var weapon3_image = preload("res://Weapons/Shotgun/m1014_1.png")
-
 # Variable to hold the current weapon node
 var current_weapon = null
 var current_weapon_index = 1
-var ammo_counts = {1: 12, 2: 21, 3: 8}  # Default ammo counts for each weapon
-
-# Load the HUD scene
-var hud_scene = preload("res://Menus/Hud/hud.tscn")
-var hud_instance = null
-var weapon_image_texture_rect = null
+var ammo_counts = {1: 17, 2: 20, 3: 6}  # Default ammo counts for each weapon
 
 func _ready():
-	hud_instance = hud_scene.instantiate()
-	add_child(hud_instance)
-	
-	weapon_image_texture_rect = hud_instance.get_node("WeaponImage")
-	
 	switch_weapon(1)
 
 func _input(event):
@@ -54,28 +43,23 @@ func switch_weapon(weapon_number):
 	match weapon_number:
 		1:
 			current_weapon = weapon1_scene.instantiate()
-			weapon_image_texture_rect.texture = weapon1_image
-			weapon_image_texture_rect.flip_h = true
 		2:
 			current_weapon = weapon2_scene.instantiate()
-			weapon_image_texture_rect.texture = weapon2_image
-			weapon_image_texture_rect.flip_h = false
 		3:
 			current_weapon = weapon3_scene.instantiate()
-			weapon_image_texture_rect.texture = weapon3_image
-			weapon_image_texture_rect.flip_h = true
 	
 	if current_weapon:
 		add_child(current_weapon)
 		current_weapon.position = Vector2.ZERO
 		current_weapon.ammo = ammo_counts[weapon_number]
 		current_weapon_index = weapon_number
+	
+	# Update the weapon image in the HUD
+	$Hud.update_weapon_img(weapon_number)
 
 func save_current_ammo():
 	if current_weapon:
 		ammo_counts[current_weapon_index] = current_weapon.ammo
-
-#-------------------------------------------------------------------------------------------
 
 func _physics_process(_delta):
 	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
@@ -84,6 +68,8 @@ func _physics_process(_delta):
 	
 	walk_face()
 	hud()
+	
+	
 
 func walk_face():
 	if velocity.length() > 0.0:

@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://djnxfcqwdydru"]
+
+[ext_resource type="Script" path="res://Characters/SpiderBot/SpiderBot.gd" id="1_g6hx1"]
+[ext_resource type="Texture2D" uid="uid://byec0x4oxo11" path="res://Characters/SpiderBot/Images/aranha1e3.png" id="2_nypsc"]
+[ext_resource type="Texture2D" uid="uid://3rha7rnov13p" path="res://Characters/SpiderBot/Images/aranha2.png" id="3_yg7ph"]
+[ext_resource type="Texture2D" uid="uid://btml4n3f1p07v" path="res://Characters/SpiderBot/Images/aranha4.png" id="4_1irtx"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jw3ub"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_nypsc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_yg7ph")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_nypsc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1irtx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
+
+[node name="SpiderBot" type="Node2D"]
+script = ExtResource("1_g6hx1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-0.999996, 0.999994)
+scale = Vector2(0.118851, 0.118851)
+sprite_frames = SubResource("SpriteFrames_jw3ub")
+frame = 2
+frame_progress = 0.889844

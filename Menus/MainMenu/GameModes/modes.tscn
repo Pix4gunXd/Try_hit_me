@@ -48,16 +48,17 @@ color = Color(0, 0, 0, 1)
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.498
-anchor_top = 0.553
-anchor_right = 0.498
-anchor_bottom = 0.553
-offset_left = -84.696
-offset_top = -30.344
-offset_right = 84.304
-offset_bottom = 30.656
+anchor_left = 0.5
+anchor_top = 0.616
+anchor_right = 0.5
+anchor_bottom = 0.616
+offset_left = -86.0
+offset_top = -68.168
+offset_right = 83.0
+offset_bottom = 67.832
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 14
 
 [node name="Arena" type="Button" parent="VBoxContainer"]
 layout_mode = 2
@@ -109,6 +110,41 @@ libraries = {
 
 [node name="ButtonHover" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_tt6y8")
+
+[node name="High_Score" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.75
+anchor_top = 0.465
+anchor_right = 0.878
+anchor_bottom = 0.573
+offset_left = -6.10352e-05
+offset_top = -0.320007
+offset_right = -0.456055
+offset_bottom = -0.304016
+theme_override_fonts/font = ExtResource("2_1cnxv")
+theme_override_font_sizes/font_size = 25
+text = "High Score"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="High_Score_number" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.812
+anchor_top = 0.596
+anchor_right = 0.812
+anchor_bottom = 0.596
+offset_left = -57.4241
+offset_top = -27.208
+offset_right = 58.5759
+offset_bottom = 27.792
+theme_override_fonts/font = ExtResource("2_1cnxv")
+theme_override_font_sizes/font_size = 45
+text = "0
+"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="mouse_entered" from="VBoxContainer/Arena" to="." method="_on_arena_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/Arena" to="." method="_on_arena_pressed"]

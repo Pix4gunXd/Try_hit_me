@@ -49,30 +49,37 @@ color = Color(0, 0, 0, 1)
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
-anchor_top = 0.65
+anchor_top = 0.648
 anchor_right = 0.5
-anchor_bottom = 0.65
-offset_left = -292.0
-offset_top = -141.2
-offset_right = 292.0
-offset_bottom = 140.8
+anchor_bottom = 0.648
+offset_left = -220.0
+offset_top = -131.904
+offset_right = 221.0
+offset_bottom = 133.096
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 25
+theme_override_constants/separation = -90
 alignment = 1
 
-[node name="Label" type="Label" parent="VBoxContainer"]
+[node name="Label2" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_ft0s7")
 theme_override_font_sizes/font_size = 36
 text = "W,A,S,D - Walk"
 horizontal_alignment = 1
 
-[node name="Label2" type="Label" parent="VBoxContainer"]
+[node name="Label4" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_ft0s7")
 theme_override_font_sizes/font_size = 36
 text = "Left Mouse - Shoot"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ft0s7")
+theme_override_font_sizes/font_size = 36
+text = "R - Reload"
 horizontal_alignment = 1
 
 [node name="Label3" type="Label" parent="VBoxContainer"]
@@ -80,6 +87,13 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("2_ft0s7")
 theme_override_font_sizes/font_size = 36
 text = "1,2,3 - Change weapon"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ft0s7")
+theme_override_font_sizes/font_size = 36
+text = "Esc - Pause"
 horizontal_alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
@@ -95,7 +109,7 @@ grow_vertical = 2
 alignment = 1
 
 [node name="TryHitMeLabel2" type="Sprite2D" parent="HBoxContainer"]
-position = Vector2(571, 196.814)
+position = Vector2(571, 180.814)
 scale = Vector2(1.254, 1.226)
 texture = ExtResource("3_lqd06")
 

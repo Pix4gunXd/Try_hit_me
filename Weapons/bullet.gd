@@ -4,7 +4,7 @@ var travelled_distance = 0
 var dmg = null  # Damage value assigned at instantiation
 
 func _physics_process(delta):
-	const SPEED = 1600
+	const SPEED = 2000
 	const RANGE = 1200
 	
 	var direction = Vector2.RIGHT.rotated(rotation) # RIGHT = x1/y0 MAKES THE BULLET GO STRAIGHT

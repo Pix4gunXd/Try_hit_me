@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://d1cm1cw0blfuj"]
 
 [ext_resource type="Script" path="res://Enemies/Level_1/Bobot/e_bobot.gd" id="1_hsv61"]
-[ext_resource type="PackedScene" uid="uid://il3ijeiqoruh" path="res://Characteres/Bobot/bobot.tscn" id="1_p7kik"]
+[ext_resource type="PackedScene" uid="uid://il3ijeiqoruh" path="res://Characters/Bobot/bobot.tscn" id="1_p7kik"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wwrqg"]
 radius = 38.7836

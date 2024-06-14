@@ -1,21 +1,23 @@
-[gd_scene load_steps=8 format=3 uid="uid://g6utxpjj2a1q"]
+[gd_scene load_steps=10 format=3 uid="uid://g6utxpjj2a1q"]
 
 [ext_resource type="PackedScene" uid="uid://booyxkl3io48e" path="res://Player/player.tscn" id="1_7wftd"]
 [ext_resource type="Script" path="res://Scenes/main/Arena/SpawnEnemies.gd" id="1_no6j3"]
 [ext_resource type="Texture2D" uid="uid://cwxv47084lqbs" path="res://Images/BG.png" id="2_gjvsv"]
 [ext_resource type="PackedScene" uid="uid://glxegwgy8l1s" path="res://Menus/Hud/pause_menu.tscn" id="4_ayghk"]
+[ext_resource type="PackedScene" uid="uid://cfjbo1lfcsiqu" path="res://Menus/Hud/game_over.tscn" id="5_xli8l"]
+[ext_resource type="Texture2D" uid="uid://bremyagomc4x6" path="res://Images/wall.png" id="6_f66ag"]
 
 [sub_resource type="Curve2D" id="Curve2D_dc17w"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -1027.42, -3121.97, 0, 0, 0, 0, -1060.65, 830.093, 0, 0, 0, 0, 5063.92, 822.161, 0, 0, 0, 0, 5095.3, -3127.92, 0, 0, 0, 0, -1029.27, -3127.92)
+"points": PackedVector2Array(0, 0, 0, 0, -1027.42, -3121.97, 0, 0, 0, 0, -1050.68, 1794.56, 0, 0, 0, 0, 6556.33, 1746.09, 0, 0, 0, 0, 6570.57, -3139.23, 0, 0, 0, 0, -1029.27, -3127.92)
 }
 point_count = 5
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q7mq4"]
-size = Vector2(3850, 54)
+size = Vector2(6919, 58)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6mtcr"]
-size = Vector2(64.5, 2465)
+size = Vector2(76.25, 3970.63)
 
 [node name="Arena" type="Node2D"]
 script = ExtResource("1_no6j3")
@@ -26,62 +28,230 @@ offset_top = -2356.0
 offset_right = 3852.0
 offset_bottom = -1.0
 mouse_filter = 2
-color = Color(0.372549, 0.372549, 0.372549, 1)
+color = Color(1, 1, 1, 0)
 
 [node name="Map_Background" type="Sprite2D" parent="ColorRect"]
-position = Vector2(1863, 1166)
-scale = Vector2(1.79255, 1.76417)
+z_index = -2
+position = Vector2(1869, 1186)
+scale = Vector2(2.33361, 2.29667)
+texture = ExtResource("2_gjvsv")
+
+[node name="Map_Background5" type="Sprite2D" parent="ColorRect"]
+z_index = -2
+position = Vector2(-7160, 1186)
+scale = Vector2(2.33361, 2.29667)
+texture = ExtResource("2_gjvsv")
+
+[node name="Map_Background4" type="Sprite2D" parent="ColorRect"]
+z_index = -2
+position = Vector2(1869, -4271)
+scale = Vector2(2.33361, 2.29667)
+texture = ExtResource("2_gjvsv")
+
+[node name="Map_Background2" type="Sprite2D" parent="ColorRect"]
+z_index = -2
+position = Vector2(1869, 6589)
+scale = Vector2(2.33361, 2.29667)
+texture = ExtResource("2_gjvsv")
+
+[node name="Map_Background3" type="Sprite2D" parent="ColorRect"]
+z_index = -2
+position = Vector2(10918, 1186)
+scale = Vector2(2.33361, 2.29667)
 texture = ExtResource("2_gjvsv")
 
 [node name="Path2D" type="Path2D" parent="ColorRect"]
-position = Vector2(818.609, 1758.39)
-scale = Vector2(0.541752, 0.504293)
+position = Vector2(0.83844, 1663.17)
+scale = Vector2(0.702247, 0.618998)
 curve = SubResource("Curve2D_dc17w")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="ColorRect/Path2D"]
 position = Vector2(-1027.42, -3121.97)
-rotation = 1.5792
+rotation = 1.57553
 
 [node name="Player" parent="." instance=ExtResource("1_7wftd")]
 position = Vector2(1867, -1160)
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.3
+wait_time = 0.5
+autostart = true
+
+[node name="NovaRodada" type="Timer" parent="."]
+wait_time = 15.0
 autostart = true
 
 [node name="TopBoundary" type="StaticBody2D" parent="."]
 position = Vector2(294, 312)
+collision_layer = 3
+collision_mask = 3
 constant_linear_velocity = Vector2(20, 20)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TopBoundary"]
-position = Vector2(1633, -2691)
+position = Vector2(1564.5, -3412)
 shape = SubResource("RectangleShape2D_q7mq4")
 
 [node name="BottomBoundary" type="StaticBody2D" parent="."]
 position = Vector2(284, 2721)
+collision_layer = 3
+collision_mask = 3
 constant_linear_velocity = Vector2(20, 20)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BottomBoundary"]
-position = Vector2(1643, -2692.5)
+position = Vector2(1593, -1841.5)
 shape = SubResource("RectangleShape2D_q7mq4")
 
 [node name="LeftBoundary" type="StaticBody2D" parent="."]
 position = Vector2(1252, 330)
+collision_layer = 3
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LeftBoundary"]
-position = Vector2(-1284.5, -1504.5)
+position = Vector2(-2801, -1462.63)
 shape = SubResource("RectangleShape2D_6mtcr")
 
 [node name="RightBoundary" type="StaticBody2D" parent="."]
 position = Vector2(1395, 340)
+collision_layer = 3
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RightBoundary"]
-position = Vector2(2489.25, -1514.5)
+position = Vector2(3889.13, -1476.31)
 shape = SubResource("RectangleShape2D_6mtcr")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("4_ayghk")]
+unique_name_in_owner = true
 visible = false
 
+[node name="GameOver" parent="CanvasLayer" instance=ExtResource("5_xli8l")]
+unique_name_in_owner = true
+visible = false
+
+[node name="Paredes" type="TextureRect" parent="."]
+offset_left = -51.0
+offset_top = -2410.0
+offset_right = 3915.0
+offset_bottom = 40.0
+
+[node name="Wall" type="Sprite2D" parent="Paredes"]
+position = Vector2(-1496, -192)
+texture = ExtResource("6_f66ag")
+
+[node name="Wall2" type="Sprite2D" parent="Paredes"]
+position = Vector2(-1496, 801)
+texture = ExtResource("6_f66ag")
+
+[node name="Wall3" type="Sprite2D" parent="Paredes"]
+position = Vector2(-1496, 1791)
+texture = ExtResource("6_f66ag")
+
+[node name="Wall15" type="Sprite2D" parent="Paredes"]
+position = Vector2(-1496, 2785.25)
+scale = Vector2(1, 1.02157)
+texture = ExtResource("6_f66ag")
+
+[node name="Wall19" type="Sprite2D" parent="Paredes"]
+position = Vector2(5326, -194)
+texture = ExtResource("6_f66ag")
+
+[node name="Wall20" type="Sprite2D" parent="Paredes"]
+position = Vector2(5326, 799)
+texture = ExtResource("6_f66ag")
+
+[node name="Wall21" type="Sprite2D" parent="Paredes"]
+position = Vector2(5326, 1789)
+texture = ExtResource("6_f66ag")
+
+[node name="Wall22" type="Sprite2D" parent="Paredes"]
+position = Vector2(5326, 2783.25)
+scale = Vector2(1, 1.02157)
+texture = ExtResource("6_f66ag")
+
+[node name="Wall4" type="Sprite2D" parent="Paredes"]
+position = Vector2(-1003, 3290)
+rotation = 1.5708
+texture = ExtResource("6_f66ag")
+
+[node name="Wall5" type="Sprite2D" parent="Paredes"]
+position = Vector2(-12, 3289)
+rotation = 1.5708
+texture = ExtResource("6_f66ag")
+
+[node name="Wall6" type="Sprite2D" parent="Paredes"]
+position = Vector2(971, 3289)
+rotation = 1.5708
+texture = ExtResource("6_f66ag")
+
+[node name="Wall7" type="Sprite2D" parent="Paredes"]
+position = Vector2(1952, 3289)
+rotation = 1.5708
+scale = Vector2(1, 0.977782)
+texture = ExtResource("6_f66ag")
+
+[node name="Wall16" type="Sprite2D" parent="Paredes"]
+position = Vector2(2913, 3289)
+rotation = 1.5708
+scale = Vector2(1, 0.977782)
+texture = ExtResource("6_f66ag")
+
+[node name="Wall17" type="Sprite2D" parent="Paredes"]
+position = Vector2(3878, 3289)
+rotation = 1.5708
+scale = Vector2(1, 0.977782)
+texture = ExtResource("6_f66ag")
+
+[node name="Wall18" type="Sprite2D" parent="Paredes"]
+position = Vector2(4842, 3289)
+rotation = 1.5708
+scale = Vector2(1, 0.977782)
+texture = ExtResource("6_f66ag")
+
+[node name="Wall23" type="Sprite2D" parent="Paredes"]
+z_index = -1
+position = Vector2(-1003, -688)
+rotation = 1.5708
+texture = ExtResource("6_f66ag")
+
+[node name="Wall24" type="Sprite2D" parent="Paredes"]
+z_index = -1
+position = Vector2(-12, -689)
+rotation = 1.5708
+texture = ExtResource("6_f66ag")
+
+[node name="Wall25" type="Sprite2D" parent="Paredes"]
+z_index = -1
+position = Vector2(971, -689)
+rotation = 1.5708
+texture = ExtResource("6_f66ag")
+
+[node name="Wall26" type="Sprite2D" parent="Paredes"]
+z_index = -1
+position = Vector2(1952, -689)
+rotation = 1.5708
+scale = Vector2(1, 0.977782)
+texture = ExtResource("6_f66ag")
+
+[node name="Wall27" type="Sprite2D" parent="Paredes"]
+z_index = -1
+position = Vector2(2913, -689)
+rotation = 1.5708
+scale = Vector2(1, 0.977782)
+texture = ExtResource("6_f66ag")
+
+[node name="Wall28" type="Sprite2D" parent="Paredes"]
+z_index = -1
+position = Vector2(3878, -689)
+rotation = 1.5708
+scale = Vector2(1, 0.977782)
+texture = ExtResource("6_f66ag")
+
+[node name="Wall29" type="Sprite2D" parent="Paredes"]
+z_index = -1
+position = Vector2(4842, -689)
+rotation = 1.5708
+scale = Vector2(1, 0.977782)
+texture = ExtResource("6_f66ag")
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="NovaRodada" to="." method="_on_nova_rodada_timeout"]

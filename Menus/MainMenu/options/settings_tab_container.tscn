@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c6poewhoqyleh" path="res://Menus/Buttons/Sound/audio_slider_settings.tscn" id="4_w8r6f"]
 
 [node name="Settings_tab_container" type="Control"]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -97,3 +98,12 @@ layout_mode = 2
 [node name="Audio_slider_settings3" parent="TabContainer/Sound/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("4_w8r6f")]
 layout_mode = 2
 bus_name = "Sfx"
+
+[node name="Button" type="Button" parent="TabContainer/Sound/MarginContainer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_wv5cf")
+theme_override_font_sizes/font_size = 31
+text = "SFX Test"
+
+[connection signal="pressed" from="TabContainer/Sound/MarginContainer/ScrollContainer/VBoxContainer/Button" to="TabContainer/Sound/MarginContainer/ScrollContainer/VBoxContainer/Audio_slider_settings3" method="_on_button_pressed"]

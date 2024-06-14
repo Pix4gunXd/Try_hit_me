@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://booyxkl3io48e"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_8p5x0"]
-[ext_resource type="PackedScene" uid="uid://cxxeiqfuatwlt" path="res://Characteres/Null_C/null_c.tscn" id="1_jrrlv"]
+[ext_resource type="PackedScene" uid="uid://cxxeiqfuatwlt" path="res://Characters/Null_C/null_c.tscn" id="1_jrrlv"]
 [ext_resource type="PackedScene" uid="uid://c0lgodkbnsq7b" path="res://Menus/Hud/hud.tscn" id="4_io4ti"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6uhpm"]
@@ -35,3 +35,6 @@ debug_color = Color(1, 0, 0, 0.419608)
 zoom = Vector2(0.7, 0.7)
 
 [node name="Hud" parent="." instance=ExtResource("4_io4ti")]
+
+[node name="Walking" type="AudioStreamPlayer" parent="."]
+bus = &"Sfx"

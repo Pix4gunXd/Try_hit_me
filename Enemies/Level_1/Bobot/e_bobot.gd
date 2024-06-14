@@ -7,11 +7,11 @@ extends CharacterBody2D
 var health = 60
 var dmg = 10
 var dmg_rate = 0.5
-var xp = null
+var scoreValue = 10
 var contato_player = false
 
 # Parameters for separation logic
-var desired_distance = 60.0  # Distance to maintain from the player
+var desired_distance = 80.0  # Distance to maintain from the player
 var separation_strength = 200.0  # Strength of the separation force
 
 func _ready():
@@ -32,8 +32,8 @@ func _physics_process(delta):
 		velocity += separation_force
 
 	move_and_slide()
-	
 	walk_face()
+	die()
 
 func walk_face():
 	
@@ -45,14 +45,17 @@ func walk_face():
 func take_damage(weapon_dmg):
 	health -= weapon_dmg
 	$Bobot.play_hurt()
-	
+
+func die():
 	if health <= 0:
+		Score.atualizarScore(scoreValue)
 		queue_free()
 		# Add animation to being hurt
 		const SMOKE_SCENE = preload("res://smoke_explosion/smoke_explosion.tscn")
 		var smoke = SMOKE_SCENE.instantiate()
 		get_parent().add_child(smoke)
 		smoke.global_position = global_position
+
 
 func hurt():
 	if contato_player == true:
