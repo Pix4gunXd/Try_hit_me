@@ -5,6 +5,7 @@ const PISTOL_RELOAD = preload("res://Sounds/Weapons/pistol-reload.mp3")
 const EMPTY_CLIP = preload("res://Sounds/Weapons/rifle-clip-empty.mp3")
 
 
+
 var max_ammo = 17
 var ammo = max_ammo
 var dmg = 15

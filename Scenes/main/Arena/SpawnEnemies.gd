@@ -1,10 +1,10 @@
 extends Node2D
 
 var enemy_count = 0
-var max_enemies = 20
+var max_enemies = 15
 
 var spider_count = 0
-var max_spiders = 20
+var max_spiders = 15
 
 @warning_ignore("unused_parameter")
 func _process(delta):
@@ -12,8 +12,8 @@ func _process(delta):
 		%GameOver.gameOver()
 	
 	#AudioPlayer.stop_music_bg()
-	
 
+# Inimigos ultrapassam limite máximo de spawn
 
 func spawn_enemy():
 	if enemy_count < max_enemies:
@@ -37,6 +37,7 @@ func spawn_spider():
 			var new_spider = preload("res://Enemies/Level_1/SpiderBot/e_spider_bot.tscn").instantiate()
 			path_follow.progress_ratio = randf()
 			new_spider.global_position = path_follow.global_position
+			# Adicionar uma verificação de 
 			add_child(new_spider)
 			spider_count += 1
 		else:

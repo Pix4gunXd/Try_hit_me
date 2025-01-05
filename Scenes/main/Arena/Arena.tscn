@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://g6utxpjj2a1q"]
+[gd_scene load_steps=13 format=3 uid="uid://g6utxpjj2a1q"]
 
 [ext_resource type="PackedScene" uid="uid://booyxkl3io48e" path="res://Player/player.tscn" id="1_7wftd"]
 [ext_resource type="Script" path="res://Scenes/main/Arena/SpawnEnemies.gd" id="1_no6j3"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://glxegwgy8l1s" path="res://Menus/Hud/pause_menu.tscn" id="4_ayghk"]
 [ext_resource type="PackedScene" uid="uid://cfjbo1lfcsiqu" path="res://Menus/Hud/game_over.tscn" id="5_xli8l"]
 [ext_resource type="Texture2D" uid="uid://bremyagomc4x6" path="res://Images/wall.png" id="6_f66ag"]
+[ext_resource type="PackedScene" uid="uid://buedo1g2n5ocj" path="res://Scenes/light/dark_ambient.tscn" id="7_svcip"]
 
 [sub_resource type="Curve2D" id="Curve2D_dc17w"]
 _data = {
@@ -18,6 +19,12 @@ size = Vector2(6919, 58)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6mtcr"]
 size = Vector2(76.25, 3970.63)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_63qmq"]
+blend_mode = 1
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ck37y"]
+polygon = PackedVector2Array(-1523, 3316, -1525, -718, 5348, -718, 5350, 3315)
 
 [node name="Arena" type="Node2D"]
 script = ExtResource("1_no6j3")
@@ -252,6 +259,14 @@ position = Vector2(4842, -689)
 rotation = 1.5708
 scale = Vector2(1, 0.977782)
 texture = ExtResource("6_f66ag")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+material = SubResource("CanvasItemMaterial_63qmq")
+position = Vector2(-51, -2410)
+occluder = SubResource("OccluderPolygon2D_ck37y")
+
+[node name="DarkAmbient" parent="." instance=ExtResource("7_svcip")]
+position = Vector2(-51, -2410)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="NovaRodada" to="." method="_on_nova_rodada_timeout"]

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://buedo1g2n5ocj"]
+
+[node name="DarkAmbient" type="Node2D"]
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+position = Vector2(-1, 0)
+scale = Vector2(1.56, 1)
+color = Color(0.121569, 0.121569, 0.121569, 1)
+energy = 1.5
+blend_mode = 2

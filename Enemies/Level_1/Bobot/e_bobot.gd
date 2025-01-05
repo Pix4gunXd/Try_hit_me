@@ -42,6 +42,7 @@ func walk_face():
 	else:
 		$Bobot.scale.x = 1
 
+
 func take_damage(weapon_dmg):
 	health -= weapon_dmg
 	$Bobot.play_hurt()

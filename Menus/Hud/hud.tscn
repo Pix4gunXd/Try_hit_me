@@ -82,7 +82,7 @@ offset_right = 173.0
 offset_bottom = 34.0
 theme_override_fonts/font = ExtResource("2_rtyad")
 theme_override_font_sizes/font_size = 31
-text = "Alpha v 1.0"
+text = "Alpha v 1.2"
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 anchors_preset = 3
