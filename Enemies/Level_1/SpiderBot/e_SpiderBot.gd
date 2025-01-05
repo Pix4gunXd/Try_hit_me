@@ -41,6 +41,7 @@ func walk_face():
 func take_damage(weapon_dmg):
 	health -= weapon_dmg
 	#Add Animation to being hurt
+	
 
 func die():
 	if health <= 0:

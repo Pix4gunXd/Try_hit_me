@@ -59,9 +59,11 @@ alignment = 1
 
 [node name="Window_mode_button" parent="TabContainer/Graphics/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("2_02snb")]
 layout_mode = 2
+size_flags_vertical = 4
 
 [node name="Resolution_mode_button" parent="TabContainer/Graphics/MarginContainer/ScrollContainer/VBoxContainer" instance=ExtResource("3_25t5p")]
 layout_mode = 2
+size_flags_vertical = 4
 
 [node name="Sound" type="TabBar" parent="TabContainer"]
 visible = false

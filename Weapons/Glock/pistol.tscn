@@ -1,7 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://6tvi0h603au0"]
+[gd_scene load_steps=10 format=3 uid="uid://6tvi0h603au0"]
 
 [ext_resource type="Script" path="res://Weapons/Glock/pistol.gd" id="1_i28cd"]
 [ext_resource type="Texture2D" uid="uid://jnyy86i026x7" path="res://Weapons/Glock/glock_17_1.png" id="2_ormr1"]
+[ext_resource type="Texture2D" uid="uid://c2hgknf7k1uer" path="res://Weapons/Glock/glock_17_2.png" id="3_i4k31"]
+[ext_resource type="Texture2D" uid="uid://bk556m1xy8q5l" path="res://Characters/Null_C/images/arm_nogun.png" id="3_ira2x"]
 [ext_resource type="Texture2D" uid="uid://pwp2kkkoy03w" path="res://Characters/Null_C/images/arm.png" id="3_tgx6l"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_8euar"]
@@ -75,6 +77,66 @@ tracks/3/keys = {
 "update": 0,
 "values": [Vector2(19.9751, 2.23462), Vector2(20.0104, -0.765171), Vector2(19.9751, 2.23462)]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Marker2D/Glock172:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(56.9961, 0.669067), Vector2(57.09, -7.3304), Vector2(56.9961, 0.669067)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Marker2D/Glock172:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0117383, -0.0623153, 0.0117383]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Marker2D/ArmNogun:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(28.9745, 2.34026), Vector2(29.0215, -1.65945), Vector2(28.9745, 2.34026)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Marker2D/ArmNogun:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0117383, -0.120294, 0.0117383]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Marker2D/ShootingPoint:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(74.1005, -8.13076), Vector2(74.2179, -18.1301), Vector2(74.1005, -8.13076)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_43qne"]
 _data = {
@@ -89,16 +151,30 @@ script = ExtResource("1_i28cd")
 
 [node name="Marker2D" type="Marker2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(-24, -32)
+position = Vector2(-22, -35)
 rotation = -0.0117383
 
 [node name="Glock17" type="Sprite2D" parent="Marker2D"]
+visible = false
 position = Vector2(45.0204, -1.47165)
 rotation = -3.12985
 scale = Vector2(0.065, -0.058)
 texture = ExtResource("2_ormr1")
 
+[node name="Glock172" type="Sprite2D" parent="Marker2D"]
+position = Vector2(56.9961, 0.669067)
+rotation = 0.0117383
+scale = Vector2(0.127282, 0.127282)
+texture = ExtResource("3_i4k31")
+
+[node name="ArmNogun" type="Sprite2D" parent="Marker2D"]
+position = Vector2(28.9745, 2.34026)
+rotation = 0.0117383
+scale = Vector2(0.268432, 0.268432)
+texture = ExtResource("3_ira2x")
+
 [node name="Arm" type="Sprite2D" parent="Marker2D"]
+visible = false
 position = Vector2(19.9751, 2.23462)
 rotation = -1.55906
 scale = Vector2(0.104226, 0.112086)
@@ -106,7 +182,7 @@ texture = ExtResource("3_tgx6l")
 
 [node name="ShootingPoint" type="Marker2D" parent="Marker2D"]
 unique_name_in_owner = true
-position = Vector2(63.1248, -10.2597)
+position = Vector2(74.1005, -8.13076)
 rotation = 0.0056614
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

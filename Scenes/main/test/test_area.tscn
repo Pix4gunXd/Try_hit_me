@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://cy2flbvu7gqhb"]
+
+[ext_resource type="Texture2D" uid="uid://cwxv47084lqbs" path="res://Images/BG.png" id="1_ok8jv"]
+[ext_resource type="PackedScene" uid="uid://booyxkl3io48e" path="res://Player/player.tscn" id="1_rpwci"]
+[ext_resource type="PackedScene" uid="uid://glxegwgy8l1s" path="res://Menus/Hud/pause_menu.tscn" id="2_uoxbq"]
+[ext_resource type="PackedScene" uid="uid://cfjbo1lfcsiqu" path="res://Menus/Hud/game_over.tscn" id="3_u26e7"]
+
+[node name="TestArea" type="Node2D"]
+
+[node name="Bg" type="Sprite2D" parent="."]
+position = Vector2(24.0002, -32)
+scale = Vector2(1.98167, 1.98167)
+texture = ExtResource("1_ok8jv")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("2_uoxbq")]
+unique_name_in_owner = true
+visible = false
+
+[node name="GameOver" parent="CanvasLayer" instance=ExtResource("3_u26e7")]
+unique_name_in_owner = true
+visible = false
+
+[node name="Player" parent="." instance=ExtResource("1_rpwci")]

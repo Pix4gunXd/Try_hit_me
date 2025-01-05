@@ -4,12 +4,12 @@
 [ext_resource type="PackedScene" uid="uid://il3ijeiqoruh" path="res://Characters/Bobot/bobot.tscn" id="1_p7kik"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wwrqg"]
-radius = 38.7836
-height = 184.684
+radius = 40.6305
+height = 195.765
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ayots"]
 radius = 32.3197
-height = 171.756
+height = 186.531
 
 [node name="E_Bobot" type="CharacterBody2D"]
 scale = Vector2(1.08293, 1.08293)
@@ -27,7 +27,7 @@ collision_layer = 2
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
-position = Vector2(0.923419, -32.3197)
+position = Vector2(0.923421, -33.2431)
 shape = SubResource("CapsuleShape2D_wwrqg")
 debug_color = Color(0.701961, 0, 0.0313726, 0.447059)
 
